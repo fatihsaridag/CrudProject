@@ -1,4 +1,5 @@
-﻿using CrudProject.GenericRepository.Abstract;
+﻿using CrudProject.GenericRepository;
+using CrudProject.GenericRepository.Abstract;
 using CrudProject.Models;
 using CrudProject.RepositoryManager.Abstract;
 using Microsoft.AspNetCore.Mvc;
@@ -11,7 +12,7 @@ namespace CrudProject.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly IRepositoryManager _repositoryManager;
 
-        public HomeController(ILogger<HomeController> logger,  IRepositoryManager repositoryManager)
+        public HomeController(ILogger<HomeController> logger,  IRepositoryManager repositoryManager )
         {
             _logger = logger;
             _repositoryManager = repositoryManager;

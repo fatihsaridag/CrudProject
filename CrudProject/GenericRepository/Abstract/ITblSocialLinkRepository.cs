@@ -2,7 +2,7 @@
 
 namespace CrudProject.GenericRepository.Abstract
 {
-    public interface ITblSocialLinkRepository : IGenericRepository<TblSocialFeedLink>
+    public interface ITblSocialLinkRepository : IGenericRepository<TblSocialLink>
     {
     }
 }

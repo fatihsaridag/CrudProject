@@ -21,7 +21,7 @@ namespace CrudProject
             });
 
             builder.Services.AddScoped<IRepositoryManager, EfRepositoryManager>();
-            //builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(EfGenericRepository<>));
+            builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(EfGenericRepository<>));
 
             var app = builder.Build();
 

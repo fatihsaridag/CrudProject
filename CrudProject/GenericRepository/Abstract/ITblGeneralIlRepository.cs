@@ -2,7 +2,7 @@
 
 namespace CrudProject.GenericRepository.Abstract
 {
-    public interface ıTblGeneralIlRepository : IGenericRepository<TblGeneralIl>
+    public interface ITblGeneralIlRepository : IGenericRepository<TblGeneralIl>
     {
     }
 }
