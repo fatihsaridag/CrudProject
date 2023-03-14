@@ -1,0 +1,21 @@
+﻿@using CrudProject.Models
+@model List<DataProtectionKey>
+
+
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <td>Name</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+     <tr>
+        <td>@item.FriendlyName</td>
+    </tr>     
+    }
+
+</table>
