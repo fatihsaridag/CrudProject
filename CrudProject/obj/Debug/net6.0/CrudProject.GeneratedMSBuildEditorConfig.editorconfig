@@ -16,8 +16,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\fatih\source\repos\CrudProject\CrudProject
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/fatih/source/repos/CrudProject/CrudProject/Views/DataProtectionKeys/GetAll.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YVByb3RlY3Rpb25LZXlzXEdldEFsbC5jc2h0bWw=
+[C:/Users/fatih/source/repos/CrudProject/CrudProject/Views/DataProtectionKeys/CreateEntity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YVByb3RlY3Rpb25LZXlzXENyZWF0ZUVudGl0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/fatih/source/repos/CrudProject/CrudProject/Views/DataProtectionKeys/GetAllEntity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YVByb3RlY3Rpb25LZXlzXEdldEFsbEVudGl0eS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/fatih/source/repos/CrudProject/CrudProject/Views/DataProtectionKeys/UpdateEntity.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0YVByb3RlY3Rpb25LZXlzXFVwZGF0ZUVudGl0eS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/fatih/source/repos/CrudProject/CrudProject/Views/Home/Index.cshtml]

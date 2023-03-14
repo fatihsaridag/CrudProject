@@ -5,49 +5,49 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
-namespace CrudProject.Controllers
+namespace CrudProject.Controllers.GenericBaseController
 {
-    public class BaseController<TEntity> : Controller, IBaseController<TEntity> where TEntity : class 
+    public class BaseController<TEntity> : Controller, IBaseController<TEntity> where TEntity : class
     {
 
         private readonly IGenericRepository<TEntity> _genericRepository;
-        private readonly IRepositoryManager _repositoryManager;
+        private readonly OctaPullContext _context;
 
-        public BaseController( IGenericRepository<TEntity> genericRepository)
+        public BaseController(IGenericRepository<TEntity> genericRepository,OctaPullContext context)
         {
             _genericRepository = genericRepository;
+            _context = context;
         }
 
-        public IActionResult Create(TEntity entity)
+        public IActionResult CreateEntity(TEntity entity)
         {
             if (ModelState.IsValid)
             {
                 _genericRepository.Create(entity);
-                _repositoryManager.Save();
                 return View();
             }
             return View(entity);
         }
 
-        public IActionResult Delete(int id)
+        public IActionResult DeleteEntity(int id)
         {
             var entity = _genericRepository.GetById(id);
             if (entity != null)
             {
                 _genericRepository.Delete(entity);
-                _repositoryManager.Save();
-                return View();
+                _context.SaveChanges();
+                return RedirectToAction("GetAllEntity");
             }
             return View();
         }
 
-        public IActionResult GetAll()
+        public IActionResult GetAllEntity()
         {
             var entities = _genericRepository.GetAll();
             return View(entities);
         }
 
-        public IActionResult GetById(int id)
+        public IActionResult GetEntityById(int id)
         {
             var entity = _genericRepository.GetById(id);
             if (entity is null)
@@ -57,13 +57,28 @@ namespace CrudProject.Controllers
             return View(entity);
         }
 
-        public IActionResult Update(TEntity entity)
+
+        [HttpGet]
+        public IActionResult UpdateEntity(int id)
+        {
+            var entity = _genericRepository.GetById(id);
+            if (entity != null)
+            {
+                return View(entity);
+
+            }
+            return RedirectToAction("GetAll");
+        }
+
+
+        [HttpPost]
+        public IActionResult UpdateEntity(TEntity entity)
         {
             if (ModelState.IsValid)
             {
                 _genericRepository.Update(entity);
-                _repositoryManager.Save();
-                return View();
+                _context.SaveChanges();
+                return RedirectToAction("GetAllEntity");
             }
             return View(entity);
         }
