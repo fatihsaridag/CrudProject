@@ -14,7 +14,7 @@ namespace CrudProject
             ConfigurationManager _configuration = builder.Configuration;
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
             builder.Services.AddDbContext<OctaPullContext>(opts =>
             {
                 opts.UseSqlServer(_configuration.GetConnectionString("SqlServer"));
@@ -22,6 +22,7 @@ namespace CrudProject
 
             builder.Services.AddScoped<IRepositoryManager, EfRepositoryManager>();
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(EfGenericRepository<>));
+
 
             var app = builder.Build();
 

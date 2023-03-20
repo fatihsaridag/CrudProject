@@ -16,6 +16,7 @@ namespace CrudProject.GenericRepository
         public void Create(TEntity entity)
         {
             _context.Add(entity);
+            _context.SaveChanges();
 
         }
 
@@ -38,6 +39,7 @@ namespace CrudProject.GenericRepository
         public void Update(TEntity entity)
         {
             _context.Update(entity);
+            _context.SaveChanges();
         }
 
         public TEntity Where(Expression<Func<TEntity, bool>> predicate)

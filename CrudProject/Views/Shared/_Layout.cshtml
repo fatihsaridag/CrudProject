@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Mazer Admin Dashboard</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">   
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/mazer-main/dist/assets/css/bootstrap.css">
 
@@ -16,7 +16,20 @@
     <link rel="stylesheet" href="~/mazer-main/dist/assets/vendors/bootstrap-icons/bootstrap-icons.css">
     <link rel="stylesheet" href="~/mazer-main/dist/assets/css/app.css">
     <link rel="shortcut icon" href="~/mazer-main/dist/assets/images/favicon.svg" type="image/x-icon">
+
+ 
+
+    <!-- DevExtreme library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))</script>
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/21.2.5/css/dx.common.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/21.2.5/css/dx.light.css" />
+    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/21.2.5/css/dx-diagram.min.css" />
+    <script src="https://cdn3.devexpress.com/jslib/21.2.5/js/dx-diagram.min.js"></script>
+    <script src="https://cdn3.devexpress.com/jslib/21.2.5/js/dx.all.js"></script>
 </head>
+
+
 
 <body>
     <div id="app">
@@ -51,7 +64,7 @@
                             </a>
                             <ul class="submenu ">
                                 <li class="submenu-item ">
-                                    <a  asp-controller="DataProtectionKeys" asp-action="GetAllEntity" >DataProtectionKeys</a>
+                                    <a  asp-controller="DataProtectionKeys" asp-action="Index" >DataProtectionKeys</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="component-badge.html">TblCMSAppMenu</a>
@@ -324,6 +337,22 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
+
+                                    <div class="content-body">
+                                        <div class="container pd-x-0">
+                                            <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
+                                                <div>
+                                                    <nav aria-label="breadcrumb">
+                                                        <ol class="breadcrumb breadcrumb-style1 mg-b-10">
+                                                            <li class="breadcrumb-item"><a href="/">OctaPull</a></li>
+                                                            <li class="breadcrumb-item active pageHeader" aria-current="page"></li>
+                                                        </ol>
+                                                    </nav>
+                                                    <h4 class="mg-b-0 tx-spacing--1 pageHeader"></h4>
+                                                </div>
+                                            </div>
+
+
                                    @RenderBody()
 
                                 </div>
@@ -351,6 +380,11 @@
     <script src="~/mazer-main/dist/assets/js/pages/dashboard.js"></script>
 
     <script src="~/mazer-main/dist/assets/js/main.js"></script>
+    <!-- Diagram and Gantt -->
+   
+ 
+
+    @RenderSection("Scripts", required: false)
 </body>
 
 </html>

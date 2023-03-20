@@ -1,0 +1,79 @@
+﻿@model List<DataProtectionKey>
+
+<div id="gridContainer">
+</div>
+
+@section Scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var model = @Html.Raw(JsonConvert.SerializeObject(Model));
+            GridData(model);
+        });
+        function GridData(models) {
+            $("#gridContainer").dxDataGrid({
+                dataSource: models,
+                columns: [
+                    {
+                        dataField: "Id",
+                        caption: "Id",
+                        width: 80,
+                        allowEditing: false
+                    },
+                    {
+                        dataField: "FriendlyName",
+                        caption: "FriendlyName"
+                    },
+                    {
+                        dataField: "Xml",
+                        caption: "Xml"
+                    },
+                ],
+                paging: {
+                    pageSize: 10
+                },
+                onRowUpdated: function (e) {
+                    rowUpdate(e.data);
+                },
+                editing: {
+                    allowUpdating: true,
+                    allowAdding: true,
+                    allowDeleting: true,
+                    allowUpdating: true,
+                    mode: "popup",
+                    form: {
+                        labelLocation: "top"
+                    },
+                    popup: {
+                        showTitle: true,
+                        title: "Row in the editing state"
+                    }
+                }
+            });
+        }
+        function rowUpdate(Data) {
+            if (Data.id == null) {
+                AjaxMethod('@Url.Action("CreateEntity", "DataProtectionKeys")', Data);
+            }
+            AjaxMethod('@Url.Action("UpdateEntity", "DataProtectionKeys")', Data);
+        }
+        function AjaxMethod(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: Data,
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+
+
+    </script>
+
+}

@@ -4,11 +4,10 @@ namespace CrudProject.Controllers.GenericBaseController
 {
     public interface IBaseController<TEntity>
     {
-        IActionResult CreateEntity(TEntity entity);
-        IActionResult UpdateEntity(TEntity entity);
-        IActionResult UpdateEntity(int id);
-        IActionResult DeleteEntity(int id);
-        IActionResult GetAllEntity();
-        IActionResult GetEntityById(int id);
+        Task<IActionResult> CreateEntity(TEntity entity);
+        Task<IActionResult> UpdateEntity(TEntity entity);
+        Task<IActionResult> DeleteEntity(int id);
+        Task<IActionResult> Index();
+        Task<IActionResult> GetEntityById(int id);
     }
 }

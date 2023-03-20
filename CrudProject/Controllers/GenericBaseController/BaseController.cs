@@ -12,6 +12,7 @@ namespace CrudProject.Controllers.GenericBaseController
 
         private readonly IGenericRepository<TEntity> _genericRepository;
         private readonly OctaPullContext _context;
+        
 
         public BaseController(IGenericRepository<TEntity> genericRepository,OctaPullContext context)
         {
@@ -19,68 +20,59 @@ namespace CrudProject.Controllers.GenericBaseController
             _context = context;
         }
 
-        public IActionResult CreateEntity(TEntity entity)
+ 
+
+        [HttpPost]
+        public  async Task<IActionResult> CreateEntity(TEntity entity)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid)  
             {
                 _genericRepository.Create(entity);
-                return View();
+                return Json(true);
             }
-            return View(entity);
+            return Json(false);
+
         }
 
-        public IActionResult DeleteEntity(int id)
+        public async Task<IActionResult> DeleteEntity(int id)
         {
             var entity = _genericRepository.GetById(id);
             if (entity != null)
             {
                 _genericRepository.Delete(entity);
                 _context.SaveChanges();
-                return RedirectToAction("GetAllEntity");
+                return Json(true);
             }
-            return View();
-        }
+            return Json(false);
 
-        public IActionResult GetAllEntity()
+        }
+            
+        public async Task<IActionResult> Index()
         {
             var entities = _genericRepository.GetAll();
             return View(entities);
         }
 
-        public IActionResult GetEntityById(int id)
+        public async Task<IActionResult> GetEntityById(int id)
         {
             var entity = _genericRepository.GetById(id);
             if (entity is null)
             {
-                return View();
+                return Json(false);
             }
-            return View(entity);
+            return Json(entity);
         }
-
-
-        [HttpGet]
-        public IActionResult UpdateEntity(int id)
-        {
-            var entity = _genericRepository.GetById(id);
-            if (entity != null)
-            {
-                return View(entity);
-
-            }
-            return RedirectToAction("GetAll");
-        }
-
 
         [HttpPost]
-        public IActionResult UpdateEntity(TEntity entity)
+        public async Task<IActionResult> UpdateEntity(TEntity entity)
         {
             if (ModelState.IsValid)
             {
                 _genericRepository.Update(entity);
                 _context.SaveChanges();
-                return RedirectToAction("GetAllEntity");
+                return Json(true);
             }
-            return View(entity);
+            return Json(false);
         }
     }
 
