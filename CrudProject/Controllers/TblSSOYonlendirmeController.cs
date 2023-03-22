@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblSSOYonlendirmeController : BaseController<TblSsoyonlendirme>, IBaseController<TblSsoyonlendirme>
+    public class TblSSOYonlendirmeController : BaseController<TblSsoyonlendirme>  
     {
         public TblSSOYonlendirmeController(IGenericRepository<TblSsoyonlendirme> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

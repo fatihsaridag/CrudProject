@@ -3,7 +3,7 @@ using CrudProject.Models;
 
 namespace CrudProject.GenericRepository.Concrete
 {
-    public class EfTblOptionsRepository : EfGenericRepository<TblOption>, ITblOptionsRepository
+    public class EfTblOptionsRepository : EfGenericRepository<TblOption>
     {
         public EfTblOptionsRepository(OctaPullContext context) : base(context)
         {

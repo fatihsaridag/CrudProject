@@ -3,7 +3,7 @@ using CrudProject.Models;
 
 namespace CrudProject.GenericRepository.Concrete
 {
-    public class EfTblGeneralOnayDurumRepository : EfGenericRepository<TblGeneralOnayDurum>, ITblGeneralOnayDurumRepository
+    public class EfTblGeneralOnayDurumRepository : EfGenericRepository<TblGeneralOnayDurum>
     {
         public EfTblGeneralOnayDurumRepository(OctaPullContext context) : base(context)
         {

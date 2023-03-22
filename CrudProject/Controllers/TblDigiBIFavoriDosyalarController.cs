@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblDigiBIFavoriDosyalarController : BaseController<TblDigiBifavoriDosyalar>, IBaseController<TblDigiBifavoriDosyalar>
+    public class TblDigiBIFavoriDosyalarController : BaseController<TblDigiBifavoriDosyalar>
     {
         public TblDigiBIFavoriDosyalarController(IGenericRepository<TblDigiBifavoriDosyalar> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

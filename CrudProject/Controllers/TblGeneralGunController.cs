@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralGunController : BaseController<TblGeneralGun>, IBaseController<TblGeneralGun>
+    public class TblGeneralGunController : BaseController<TblGeneralGun>
     {
         public TblGeneralGunController(IGenericRepository<TblGeneralGun> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

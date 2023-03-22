@@ -7,7 +7,7 @@ namespace CrudProject.GenericRepository
         void Create(TEntity entity);
         void Update(TEntity entity);
         void Delete(TEntity entity);
-        TEntity GetById(int id);
+        TEntity GetById(long id);
         IEnumerable<TEntity> GetAll();
         TEntity Where(Expression<Func<TEntity, bool>> predicate);
 

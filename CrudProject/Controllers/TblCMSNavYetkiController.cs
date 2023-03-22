@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblCMSNavYetkiController : BaseController<TblCmsappNavigation>, IBaseController<TblCmsappNavigation>
+    public class TblCMSNavYetkiController : BaseController<TblCmsappNavigation>
     {
         public TblCMSNavYetkiController(IGenericRepository<TblCmsappNavigation> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralDilController : BaseController<TblGeneralDil>, IBaseController<TblGeneralDil>
+    public class TblGeneralDilController : BaseController<TblGeneralDil>
     {
         public TblGeneralDilController(IGenericRepository<TblGeneralDil> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

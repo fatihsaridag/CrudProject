@@ -1,5 +1,6 @@
 ﻿using CrudProject.GenericRepository.Abstract;
 using CrudProject.Models;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq.Expressions;
 
 namespace CrudProject.GenericRepository
@@ -7,19 +8,15 @@ namespace CrudProject.GenericRepository
     public class EfGenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         private readonly OctaPullContext _context;
-
         public EfGenericRepository(OctaPullContext context)
         {
             _context = context;
         }
-
         public void Create(TEntity entity)
         {
             _context.Add(entity);
-            _context.SaveChanges();
 
         }
-
         public void Delete(TEntity entity)
         {
             _context.Remove(entity);
@@ -31,7 +28,7 @@ namespace CrudProject.GenericRepository
             return _context.Set<TEntity>().ToList();
         }
 
-        public TEntity GetById(int id)
+        public TEntity GetById(long id)
         {
             return _context.Set<TEntity>().Find(id);
         }
@@ -39,7 +36,6 @@ namespace CrudProject.GenericRepository
         public void Update(TEntity entity)
         {
             _context.Update(entity);
-            _context.SaveChanges();
         }
 
         public TEntity Where(Expression<Func<TEntity, bool>> predicate)

@@ -4,9 +4,11 @@ using CrudProject.RepositoryManager.Abstract;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.Extensions.Caching.Memory;
 
 namespace CrudProject.Controllers.GenericBaseController
 {
+
     public class BaseController<TEntity> : Controller, IBaseController<TEntity> where TEntity : class
     {
 
@@ -22,8 +24,7 @@ namespace CrudProject.Controllers.GenericBaseController
 
  
 
-        [HttpPost]
-        public  async Task<IActionResult> CreateEntity(TEntity entity)
+        public  IActionResult Post(TEntity entity)
         {
             if (ModelState.IsValid)  
             {
@@ -34,7 +35,7 @@ namespace CrudProject.Controllers.GenericBaseController
 
         }
 
-        public async Task<IActionResult> DeleteEntity(int id)
+        public IActionResult Delete(long id)
         {
             var entity = _genericRepository.GetById(id);
             if (entity != null)
@@ -46,14 +47,14 @@ namespace CrudProject.Controllers.GenericBaseController
             return Json(false);
 
         }
-            
-        public async Task<IActionResult> Index()
+
+        public IActionResult Get()
         {
             var entities = _genericRepository.GetAll();
-            return View(entities);
+            return Json(entities);
         }
 
-        public async Task<IActionResult> GetEntityById(int id)
+        public IActionResult GetEntityById(int id)
         {
             var entity = _genericRepository.GetById(id);
             if (entity is null)
@@ -63,16 +64,11 @@ namespace CrudProject.Controllers.GenericBaseController
             return Json(entity);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> UpdateEntity(TEntity entity)
+        public IActionResult Put(TEntity entity)
         {
-            if (ModelState.IsValid)
-            {
-                _genericRepository.Update(entity);
-                _context.SaveChanges();
-                return Json(true);
-            }
-            return Json(false);
+            _genericRepository.Update(entity);
+            _context.SaveChanges();
+            return Json(true);
         }
     }
 

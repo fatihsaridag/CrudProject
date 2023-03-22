@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralFavorilerController : BaseController<TblGeneralFavoriler>, IBaseController<TblGeneralFavoriler>
+    public class TblGeneralFavorilerController : BaseController<TblGeneralFavoriler>
     {
         public TblGeneralFavorilerController(IGenericRepository<TblGeneralFavoriler> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

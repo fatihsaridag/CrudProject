@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralOnayDurumController : BaseController<TblGeneralOnayDurum>, IBaseController<TblGeneralOnayDurum>
+    public class TblGeneralOnayDurumController : BaseController<TblGeneralOnayDurum>
     {
         public TblGeneralOnayDurumController(IGenericRepository<TblGeneralOnayDurum> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

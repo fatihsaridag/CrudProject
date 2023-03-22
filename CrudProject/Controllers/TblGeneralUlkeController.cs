@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralUlkeController : BaseController<TblGeneralUlke>, IBaseController<TblGeneralUlke>
+    public class TblGeneralUlkeController : BaseController<TblGeneralUlke>
     {
         public TblGeneralUlkeController(IGenericRepository<TblGeneralUlke> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

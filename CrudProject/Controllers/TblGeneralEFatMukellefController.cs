@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralEFatMukellefController : BaseController<TblGeneralEfatMukellef>, IBaseController<TblGeneralEfatMukellef>
+    public class TblGeneralEFatMukellefController : BaseController<TblGeneralEfatMukellef>
     {
         public TblGeneralEFatMukellefController(IGenericRepository<TblGeneralEfatMukellef> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

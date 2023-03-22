@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblCmsVersionController : BaseController<TblCmsVersion>, IBaseController<TblCmsVersion>
+    public class TblCmsVersionController : BaseController<TblCmsVersion>
     {
         public TblCmsVersionController(IGenericRepository<TblCmsVersion> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

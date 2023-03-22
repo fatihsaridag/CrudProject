@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralKulGrupEkranController : BaseController<TblGeneralKulGrupEkran>, IBaseController<TblGeneralKulGrupEkran>
+    public class TblGeneralKulGrupEkranController : BaseController<TblGeneralKulGrupEkran>
     {
         public TblGeneralKulGrupEkranController(IGenericRepository<TblGeneralKulGrupEkran> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

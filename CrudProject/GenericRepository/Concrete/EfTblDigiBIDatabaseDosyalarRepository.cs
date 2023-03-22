@@ -3,7 +3,7 @@ using CrudProject.Models;
 
 namespace CrudProject.GenericRepository.Concrete
 {
-    public class EfTblDigiBIDatabaseDosyalarRepository : EfGenericRepository<TblDigiBidatabaseDosyalar>, ITblDigiBIDatabaseDosyalarRepository
+    public class EfTblDigiBIDatabaseDosyalarRepository : EfGenericRepository<TblDigiBidatabaseDosyalar>
     {
         public EfTblDigiBIDatabaseDosyalarRepository(OctaPullContext context) : base(context)
         {

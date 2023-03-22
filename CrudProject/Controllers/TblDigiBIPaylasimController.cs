@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblDigiBIPaylasimController : BaseController<TblDigiBipaylasim>, IBaseController<TblDigiBipaylasim>
+    public class TblDigiBIPaylasimController : BaseController<TblDigiBipaylasim>
     {
         public TblDigiBIPaylasimController(IGenericRepository<TblDigiBipaylasim> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

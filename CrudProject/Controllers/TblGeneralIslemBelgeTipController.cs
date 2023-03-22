@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralIslemBelgeTipController : BaseController<TblGeneralIslemBelgeTip>, IBaseController<TblGeneralIslemBelgeTip>
+    public class TblGeneralIslemBelgeTipController : BaseController<TblGeneralIslemBelgeTip>
     {
         public TblGeneralIslemBelgeTipController(IGenericRepository<TblGeneralIslemBelgeTip> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

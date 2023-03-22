@@ -22,7 +22,8 @@ namespace CrudProject
 
             builder.Services.AddScoped<IRepositoryManager, EfRepositoryManager>();
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(EfGenericRepository<>));
-
+            builder.Services.AddRazorPages().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
+            builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
             var app = builder.Build();
 
@@ -40,6 +41,7 @@ namespace CrudProject
             app.UseRouting();
 
             app.UseAuthorization();
+
 
             app.MapControllerRoute(
                 name: "default",

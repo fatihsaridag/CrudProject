@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblSSOTokenController : BaseController<TblSsotoken>, IBaseController<TblSsotoken>
+    public class TblSSOTokenController : BaseController<TblSsotoken>
     {
         public TblSSOTokenController(IGenericRepository<TblSsotoken> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblFileFavoriDosyalarController : BaseController<TblFileFavoriDosyalar>, IBaseController<TblFileFavoriDosyalar>
+    public class TblFileFavoriDosyalarController : BaseController<TblFileFavoriDosyalar>
     {
         public TblFileFavoriDosyalarController(IGenericRepository<TblFileFavoriDosyalar> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

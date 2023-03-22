@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralParaBirimiController : BaseController<TblGeneralParaBirimi>, IBaseController<TblGeneralParaBirimi>
+    public class TblGeneralParaBirimiController : BaseController<TblGeneralParaBirimi>
     {
         public TblGeneralParaBirimiController(IGenericRepository<TblGeneralParaBirimi> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

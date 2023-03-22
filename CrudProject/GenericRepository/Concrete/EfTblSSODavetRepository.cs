@@ -3,7 +3,7 @@ using CrudProject.Models;
 
 namespace CrudProject.GenericRepository.Concrete
 {
-    public class EfTblSSODavetRepository : EfGenericRepository<TblSsodavet>, ITblSSODavetRepository
+    public class EfTblSSODavetRepository : EfGenericRepository<TblSsodavet>
     {
         public EfTblSSODavetRepository(OctaPullContext context) : base(context)
         {

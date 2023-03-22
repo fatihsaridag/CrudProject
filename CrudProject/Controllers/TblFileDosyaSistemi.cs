@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblFileDosyaSistemi : BaseController<TblFileDosyaSistemi>, IBaseController<TblFileDosyaSistemi>
+    public class TblFileDosyaSistemi : BaseController<TblFileDosyaSistemi>
     {
         public TblFileDosyaSistemi(IGenericRepository<TblFileDosyaSistemi> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

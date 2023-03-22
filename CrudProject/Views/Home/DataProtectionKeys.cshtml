@@ -1,0 +1,32 @@
+﻿@page
+@using DevExtreme.AspNet.Mvc;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>DataProtectionKeys</h2>
+
+@(Html.DevExtreme().DataGrid<CrudProject.Models.DataProtectionKey>()
+    .DataSource(ds => ds.Mvc()
+        .Controller("DataProtectionKeys")
+        .LoadAction("Get")
+        .InsertAction("Post")
+        .UpdateAction("Put")
+        .DeleteAction("Delete")
+        .Key("Id")
+    )
+    .RemoteOperations(true)
+    .Columns(columns =>
+    {
+
+        columns.Add().DataField("Id");
+        columns.Add().DataField("FriendlyName");
+        columns.Add().DataField("Xml");
+
+    })
+    .Editing(e => e
+        .AllowAdding(true)
+        .AllowUpdating(true)
+        .AllowDeleting(true)
+    )
+)

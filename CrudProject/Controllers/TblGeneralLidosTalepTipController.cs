@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralLidosTalepTipController : BaseController<TblGeneralLidosTalepTip>, IBaseController<TblGeneralLidosTalepTip>
+    public class TblGeneralLidosTalepTipController : BaseController<TblGeneralLidosTalepTip>
     {
         public TblGeneralLidosTalepTipController(IGenericRepository<TblGeneralLidosTalepTip> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

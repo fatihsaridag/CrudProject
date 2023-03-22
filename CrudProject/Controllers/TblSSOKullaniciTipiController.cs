@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblSSOKullaniciTipiController : BaseController<TblSsokullaniciTipi>, IBaseController<TblSsokullaniciTipi>
+    public class TblSSOKullaniciTipiController : BaseController<TblSsokullaniciTipi>
     {
         public TblSSOKullaniciTipiController(IGenericRepository<TblSsokullaniciTipi> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

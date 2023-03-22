@@ -11,6 +11,7 @@ namespace CrudProject.RepositoryManager.Concrete
         private EfDataProtectionKeysRepository _dataProtectionKeysRepository;
         private EfTblCMSAppMenuRepository _tblCmsAppMenuRepository;
         private EfTblCMSAppNavigationRepository _tblCmsAppNavigationRepository;
+        private EfTblGeneralApplicationRepository _tblGeneralApplicationRepository;
 
 
         public EfRepositoryManager(OctaPullContext context)
@@ -24,6 +25,8 @@ namespace CrudProject.RepositoryManager.Concrete
         public ITblCMSAppMenuRepository TblCMSAppMenus => _tblCmsAppMenuRepository ?? new EfTblCMSAppMenuRepository(_context);
 
         public ITblCMSAppNavigationRepository TblCmsAppNavigationRepository => _tblCmsAppNavigationRepository ?? new EfTblCMSAppNavigationRepository(_context);
+
+        public ITblGeneralApplicationRepository TblGeneralApplication=> _tblGeneralApplicationRepository ?? new EfTblGeneralApplicationRepository(_context);
 
         public void Save()
         {

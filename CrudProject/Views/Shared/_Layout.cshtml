@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Mazer Admin Dashboard</title>
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">   
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/mazer-main/dist/assets/css/bootstrap.css">
 
@@ -17,19 +17,45 @@
     <link rel="stylesheet" href="~/mazer-main/dist/assets/css/app.css">
     <link rel="shortcut icon" href="~/mazer-main/dist/assets/images/favicon.svg" type="image/x-icon">
 
- 
-
     <!-- DevExtreme library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))</script>
-    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/21.2.5/css/dx.common.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/21.2.5/css/dx.light.css" />
-    <link rel="stylesheet" href="https://cdn3.devexpress.com/jslib/21.2.5/css/dx-diagram.min.css" />
-    <script src="https://cdn3.devexpress.com/jslib/21.2.5/js/dx-diagram.min.js"></script>
-    <script src="https://cdn3.devexpress.com/jslib/21.2.5/js/dx.all.js"></script>
+       <link href="~/css/devextreme/bootstrap.css" rel="stylesheet" />
+
+    <link href="~/css/devextreme/dx.common.css" rel="stylesheet" />
+
+    @* Predefined themes: https://js.devexpress.com/DevExtreme/Guide/Themes_and_Styles/Predefined_Themes/ *@
+    <link href="~/css/devextreme/dx.light.css" rel="stylesheet" />
+
+
+
+    @* Devextreme*@
+    <!-- Diagram and Gantt -->
+    <script src="~/js/devextreme/jquery.js"></script>
+    <script src="~/js/devextreme/bootstrap.js"></script>
+
+    <script src="~/js/devextreme/cldr.js"></script>
+    <script src="~/js/devextreme/cldr/event.js"></script>
+    <script src="~/js/devextreme/cldr/supplemental.js"></script>
+    <script src="~/js/devextreme/cldr/unresolved.js"></script>
+
+    <script src="~/js/devextreme/globalize.js"></script>
+    <script src="~/js/devextreme/globalize/message.js"></script>
+    <script src="~/js/devextreme/globalize/number.js"></script>
+    <script src="~/js/devextreme/globalize/currency.js"></script>
+    <script src="~/js/devextreme/globalize/date.js"></script>
+
+    @* Uncomment to enable client-side export *@
+    @*<script src="~/js/devextreme/jszip.js"></script>*@
+
+    <script src="~/js/devextreme/dx.all.js"></script>
+
+    @* Uncomment to provide geo-data for the VectorMap control *@
+    @* Docs: https://js.devexpress.com/DevExtreme/Guide/Widgets/VectorMap/Providing_Data/#Data_for_Areas *@
+    @*<script src="~/js/devextreme/vectormap-data/world.js"></script>*@
+
+    <script src="~/js/devextreme/aspnet/dx.aspnet.mvc.js"></script>
+    <script src="~/js/devextreme/aspnet/dx.aspnet.data.js"></script>
+
 </head>
-
-
 
 <body>
     <div id="app">
@@ -40,9 +66,6 @@
                         <div class="logo">
                          @*   <a href="index.html"><img src="~/mazer-main/dist/assets/images/logo/logo.png" alt="Logo" srcset=""></a>*@
                          OctaPull
-                        </div>
-                        <div class="toggler">
-                            <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
                         </div>
                     </div>
                 </div>
@@ -100,7 +123,7 @@
                                     <a href="component-progress.html">TblFileFavoriDosyalar</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="component-spinner.html">TblGeneralApplication</a>
+                                    <a asp-controller="Home" asp-action="TblGeneralApplications" asp>TblGeneralApplication</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a href="component-tooltip.html">TblGeneralBanka</a>
@@ -186,39 +209,32 @@
                                      <li class="submenu-item ">
                                     <a href="component-tooltip.html">TblGeneralKoy</a>
                                 </li>
-                                   </li>
+                          
+                         
                                      <li class="submenu-item ">
                                     <a href="component-tooltip.html">TblGeneralKulGrupEkran</a>
                                 </li>
-                                   </li>
                                      <li class="submenu-item ">
                                     <a href="component-tooltip.html">TblGeneralKullaniciEkAlan</a>
                                 </li>
-                                   </li>
                                      <li class="submenu-item ">
                             <a href="component-tooltip.html">TblGeneralKullaniciGrupTanim</a>
                                 </li>
-                                   </li>
                                      <li class="submenu-item ">
                                     <a href="component-tooltip.html">TblGeneralLidosDurum</a>
                                 </li>
-                                   </li>
-                                     <li class="submenu-item ">
+                                <li class="submenu-item ">
                             <a href="component-tooltip.html">TblGeneralLidosElusTip</a>
                                 </li>
-                                   </li>
                                      <li class="submenu-item ">
                             <a href="component-tooltip.html">TblGeneralLidosTalepTip</a>
                                 </li>
-                                   </li>
                                      <li class="submenu-item ">
                             <a href="component-tooltip.html">TblGeneralModul</a>
                                 </li>
-                                   </li>
                                      <li class="submenu-item ">
                             <a href="component-tooltip.html">TblGeneralOdemeTip</a>
                                 </li>
-                                   </li>
                              <li class="submenu-item ">
                                 <a href="component-tooltip.html">TblGeneralOnayDurum</a>
                                 </li>
@@ -314,13 +330,14 @@
                             <a href="component-tooltip.html">TblSSOToken</a>
                                 </li>
 
-                                                     <li class="submenu-item ">
-                            <a href="component-tooltip.html">TblSSOYonlendirme</a>
+                              <li class="submenu-item ">
+                                   <a href="component-tooltip.html">TblSSOYonlendirme</a>
                                 </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                     </ul>
+                     </ul>
+                
+
+                    </div>
                 <button class="sidebar-toggler btn x"><i data-feather="x"></i></button>
             </div>
         </div>
@@ -360,6 +377,10 @@
                         
                         </div>
                     </div>
+                
+                    </div>
+                
+                    </div>
                 </section>
             </div>
 
@@ -373,6 +394,8 @@
             </footer>
         </div>
     </div>
+
+
     <script src="~/mazer-main/dist/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="~/mazer-main/dist/assets/js/bootstrap.bundle.min.js"></script>
 
@@ -380,9 +403,8 @@
     <script src="~/mazer-main/dist/assets/js/pages/dashboard.js"></script>
 
     <script src="~/mazer-main/dist/assets/js/main.js"></script>
-    <!-- Diagram and Gantt -->
-   
- 
+
+
 
     @RenderSection("Scripts", required: false)
 </body>

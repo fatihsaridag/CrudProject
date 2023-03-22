@@ -3,7 +3,7 @@ using CrudProject.Models;
 
 namespace CrudProject.GenericRepository.Concrete
 {
-    public class EfTblGeneralEFatMukellefMailRepository : EfGenericRepository<TblGeneralEfatMukellef>, ITblGeneralEFatMukellefRepository
+    public class EfTblGeneralEFatMukellefMailRepository : EfGenericRepository<TblGeneralEfatMukellef>
     {
         public EfTblGeneralEFatMukellefMailRepository(OctaPullContext context) : base(context)
         {

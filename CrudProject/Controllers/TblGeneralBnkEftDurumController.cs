@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralBnkEftDurumController : BaseController<TblGeneralBnkEftDurum>, IBaseController<TblGeneralBnkEftDurum>
+    public class TblGeneralBnkEftDurumController : BaseController<TblGeneralBnkEftDurum>
     {
         public TblGeneralBnkEftDurumController(IGenericRepository<TblGeneralBnkEftDurum> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

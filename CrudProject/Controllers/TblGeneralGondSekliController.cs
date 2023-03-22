@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralGondSekliController : BaseController<TblGeneralGondSekli>, IBaseController<TblGeneralGondSekli>
+    public class TblGeneralGondSekliController : BaseController<TblGeneralGondSekli>
     {
         public TblGeneralGondSekliController(IGenericRepository<TblGeneralGondSekli> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

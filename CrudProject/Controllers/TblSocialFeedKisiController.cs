@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblSocialFeedKisiController : BaseController<TblSocialFeedKisi>, IBaseController<TblSocialFeedKisi>
+    public class TblSocialFeedKisiController : BaseController<TblSocialFeedKisi>
     {
         public TblSocialFeedKisiController(IGenericRepository<TblSocialFeedKisi> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

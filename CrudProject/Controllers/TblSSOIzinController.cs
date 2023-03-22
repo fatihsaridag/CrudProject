@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblSSOIzinController : BaseController<TblSsoizin>, IBaseController<TblSsoizin>
+    public class TblSSOIzinController : BaseController<TblSsoizin>
     {
         public TblSSOIzinController(IGenericRepository<TblSsoizin> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

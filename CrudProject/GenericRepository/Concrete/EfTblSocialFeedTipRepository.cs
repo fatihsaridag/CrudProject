@@ -3,7 +3,7 @@ using CrudProject.Models;
 
 namespace CrudProject.GenericRepository.Concrete
 {
-    public class EfTblSocialFeedTipRepository : EfGenericRepository<TblSocialFeedTip>, ITblSocialFeedTipRepository
+    public class EfTblSocialFeedTipRepository : EfGenericRepository<TblSocialFeedTip>
     {
         public EfTblSocialFeedTipRepository(OctaPullContext context) : base(context)
         {

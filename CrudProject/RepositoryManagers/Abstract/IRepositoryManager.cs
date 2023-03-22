@@ -7,6 +7,7 @@ namespace CrudProject.RepositoryManager.Abstract
         IDataProtectionKeysRepository DataProtectionKeys { get; }
         ITblCMSAppMenuRepository TblCMSAppMenus { get; }
         ITblCMSAppNavigationRepository TblCmsAppNavigationRepository { get; }
+        ITblGeneralApplicationRepository TblGeneralApplication { get; }
         void Save();
     }
 }

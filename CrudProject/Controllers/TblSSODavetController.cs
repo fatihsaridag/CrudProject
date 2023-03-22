@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblSSODavetController : BaseController<TblSocialLink>, IBaseController<TblSocialLink>
+    public class TblSSODavetController : BaseController<TblSocialLink>
     {
         public TblSSODavetController(IGenericRepository<TblSocialLink> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralRedYeriController : BaseController<TblGeneralRedYeri>, IBaseController<TblGeneralRedYeri>
+    public class TblGeneralRedYeriController : BaseController<TblGeneralRedYeri>
     {
         public TblGeneralRedYeriController(IGenericRepository<TblGeneralRedYeri> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

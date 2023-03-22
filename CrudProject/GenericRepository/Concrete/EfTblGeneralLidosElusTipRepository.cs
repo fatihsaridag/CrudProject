@@ -3,7 +3,7 @@ using CrudProject.Models;
 
 namespace CrudProject.GenericRepository.Concrete
 {
-    public class EfTblGeneralLidosElusTipRepository : EfGenericRepository<TblGeneralLidosElusTip>, ITblGeneralLidosElusTipRepository
+    public class EfTblGeneralLidosElusTipRepository : EfGenericRepository<TblGeneralLidosElusTip>
     {
         public EfTblGeneralLidosElusTipRepository(OctaPullContext context) : base(context)
         {

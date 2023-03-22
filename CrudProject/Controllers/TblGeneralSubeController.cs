@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralSubeController : BaseController<TblGeneralSube>, IBaseController<TblGeneralSube>
-    {
+    public class TblGeneralSubeController : BaseController<TblGeneralSube>
+    { 
         public TblGeneralSubeController(IGenericRepository<TblGeneralSube> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {
         }

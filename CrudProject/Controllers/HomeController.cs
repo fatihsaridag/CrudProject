@@ -9,30 +9,30 @@ namespace CrudProject.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+
         private readonly IRepositoryManager _repositoryManager;
 
-        public HomeController(ILogger<HomeController> logger,  IRepositoryManager repositoryManager )
+        public HomeController(IRepositoryManager repositoryManager)
         {
-            _logger = logger;
-            _repositoryManager = repositoryManager;
+            _repositoryManager= repositoryManager;
         }
 
         public IActionResult Index()
         {
-           var values=  _repositoryManager.DataProtectionKeys.GetAll();
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult DataProtectionKeys()
         {
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public IActionResult TblGeneralApplications()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var datas = _repositoryManager.TblGeneralApplication.GetAll();
+            return View(datas);
         }
+
+      
     }
 }

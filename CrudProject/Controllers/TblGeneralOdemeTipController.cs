@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralOdemeTipController : BaseController<TblGeneralOdemeTip>, IBaseController<TblGeneralOdemeTip>
+    public class TblGeneralOdemeTipController : BaseController<TblGeneralOdemeTip>
     {
         public TblGeneralOdemeTipController(IGenericRepository<TblGeneralOdemeTip> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

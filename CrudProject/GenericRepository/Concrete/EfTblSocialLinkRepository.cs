@@ -3,7 +3,7 @@ using CrudProject.Models;
 
 namespace CrudProject.GenericRepository.Concrete
 {
-    public class EfTblSocialLinkRepository : EfGenericRepository<TblSocialLink>, ITblSocialLinkRepository
+    public class EfTblSocialLinkRepository : EfGenericRepository<TblSocialLink>
     {
         public EfTblSocialLinkRepository(OctaPullContext context) : base(context)
         {

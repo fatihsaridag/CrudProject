@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralIslemTipiController : BaseController<TblGeneralIslemTipi>, IBaseController<TblGeneralIslemTipi>
+    public class TblGeneralIslemTipiController : BaseController<TblGeneralIslemTipi>
     {
         public TblGeneralIslemTipiController(IGenericRepository<TblGeneralIslemTipi> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

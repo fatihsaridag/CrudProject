@@ -5,12 +5,516 @@
       "PackagePath": "staticwebassets\\CrudProject.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx-diagram.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx-diagram.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx-diagram.min.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx-diagram.min.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx-gantt.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx-gantt.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx-gantt.min.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx-gantt.min.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.carmine.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.carmine.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.carmine.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.carmine.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.common.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.common.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.contrast.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.contrast.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.contrast.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.contrast.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.dark.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.dark.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.dark.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.dark.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.darkmoon.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.darkmoon.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.darkmoon.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.darkmoon.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.darkviolet.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.darkviolet.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.darkviolet.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.darkviolet.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.greenmist.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.greenmist.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.greenmist.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.greenmist.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.ios7.default.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.ios7.default.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.light.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.light.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.light.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.light.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.blue.dark.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.blue.dark.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.blue.dark.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.blue.dark.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.blue.light.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.blue.light.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.blue.light.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.blue.light.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.lime.dark.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.lime.dark.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.lime.dark.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.lime.dark.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.lime.light.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.lime.light.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.lime.light.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.lime.light.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.orange.dark.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.orange.dark.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.orange.dark.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.orange.dark.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.orange.light.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.orange.light.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.orange.light.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.orange.light.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.purple.dark.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.purple.dark.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.purple.dark.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.purple.dark.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.purple.light.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.purple.light.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.purple.light.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.purple.light.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.teal.dark.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.teal.dark.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.teal.dark.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.teal.dark.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.teal.light.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.teal.light.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.material.teal.light.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.material.teal.light.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.softblue.compact.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.softblue.compact.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\dx.softblue.css",
+      "PackagePath": "staticwebassets\\css\\devextreme\\dx.softblue.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\fonts\\Roboto-300.ttf",
+      "PackagePath": "staticwebassets\\css\\devextreme\\fonts\\Roboto-300.ttf"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\fonts\\Roboto-300.woff",
+      "PackagePath": "staticwebassets\\css\\devextreme\\fonts\\Roboto-300.woff"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\fonts\\Roboto-300.woff2",
+      "PackagePath": "staticwebassets\\css\\devextreme\\fonts\\Roboto-300.woff2"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\fonts\\Roboto-400.ttf",
+      "PackagePath": "staticwebassets\\css\\devextreme\\fonts\\Roboto-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\fonts\\Roboto-400.woff",
+      "PackagePath": "staticwebassets\\css\\devextreme\\fonts\\Roboto-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\fonts\\Roboto-400.woff2",
+      "PackagePath": "staticwebassets\\css\\devextreme\\fonts\\Roboto-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\fonts\\Roboto-500.ttf",
+      "PackagePath": "staticwebassets\\css\\devextreme\\fonts\\Roboto-500.ttf"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\fonts\\Roboto-500.woff",
+      "PackagePath": "staticwebassets\\css\\devextreme\\fonts\\Roboto-500.woff"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\fonts\\Roboto-500.woff2",
+      "PackagePath": "staticwebassets\\css\\devextreme\\fonts\\Roboto-500.woff2"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\fonts\\Roboto-700.ttf",
+      "PackagePath": "staticwebassets\\css\\devextreme\\fonts\\Roboto-700.ttf"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\fonts\\Roboto-700.woff",
+      "PackagePath": "staticwebassets\\css\\devextreme\\fonts\\Roboto-700.woff"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\fonts\\Roboto-700.woff2",
+      "PackagePath": "staticwebassets\\css\\devextreme\\fonts\\Roboto-700.woff2"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\icons\\dxicons.ttf",
+      "PackagePath": "staticwebassets\\css\\devextreme\\icons\\dxicons.ttf"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\icons\\dxicons.woff",
+      "PackagePath": "staticwebassets\\css\\devextreme\\icons\\dxicons.woff"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\icons\\dxicons.woff2",
+      "PackagePath": "staticwebassets\\css\\devextreme\\icons\\dxicons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\icons\\dxiconsios.ttf",
+      "PackagePath": "staticwebassets\\css\\devextreme\\icons\\dxiconsios.ttf"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\icons\\dxiconsios.woff",
+      "PackagePath": "staticwebassets\\css\\devextreme\\icons\\dxiconsios.woff"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\icons\\dxiconsios.woff2",
+      "PackagePath": "staticwebassets\\css\\devextreme\\icons\\dxiconsios.woff2"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\icons\\dxiconsmaterial.ttf",
+      "PackagePath": "staticwebassets\\css\\devextreme\\icons\\dxiconsmaterial.ttf"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\icons\\dxiconsmaterial.woff",
+      "PackagePath": "staticwebassets\\css\\devextreme\\icons\\dxiconsmaterial.woff"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\devextreme\\icons\\dxiconsmaterial.woff2",
+      "PackagePath": "staticwebassets\\css\\devextreme\\icons\\dxiconsmaterial.woff2"
+    },
+    {
       "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\aspnet\\dx.aspnet.data.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\aspnet\\dx.aspnet.data.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\aspnet\\dx.aspnet.mvc.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\aspnet\\dx.aspnet.mvc.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\bootstrap.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\cldr.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\cldr.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\cldr.min.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\cldr.min.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\cldr\\event.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\cldr\\event.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\cldr\\event.min.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\cldr\\event.min.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\cldr\\supplemental.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\cldr\\supplemental.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\cldr\\supplemental.min.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\cldr\\supplemental.min.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\cldr\\unresolved.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\cldr\\unresolved.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\cldr\\unresolved.min.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\cldr\\unresolved.min.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\dx-diagram.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\dx-diagram.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\dx-diagram.min.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\dx-diagram.min.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\dx-gantt.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\dx-gantt.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\dx-gantt.min.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\dx-gantt.min.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\dx.all.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\dx.all.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\dx.viz-web.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\dx.viz-web.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\dx.viz.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\dx.viz.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\dx.web.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\dx.web.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\globalize.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\globalize.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\globalize.min.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\globalize.min.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\globalize\\currency.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\globalize\\currency.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\globalize\\currency.min.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\globalize\\currency.min.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\globalize\\date.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\globalize\\date.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\globalize\\date.min.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\globalize\\date.min.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\globalize\\message.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\globalize\\message.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\globalize\\message.min.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\globalize\\message.min.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\globalize\\number.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\globalize\\number.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\globalize\\number.min.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\globalize\\number.min.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\jquery.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\jquery.min.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\jszip.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\jszip.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\jszip.min.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\jszip.min.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.cs.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.cs.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.de.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.de.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.el.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.el.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.en.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.en.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.es.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.es.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.fi.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.fi.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.fr.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.fr.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.hu.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.hu.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.it.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.it.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.ja.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.ja.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.nl.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.nl.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.pt.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.pt.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.ru.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.ru.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.sl.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.sl.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.sv.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.sv.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.tr.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.tr.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.vi.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.vi.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\localization\\dx.messages.zh.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\localization\\dx.messages.zh.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\vectormap-data\\africa.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\vectormap-data\\africa.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\vectormap-data\\canada.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\vectormap-data\\canada.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\vectormap-data\\eurasia.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\vectormap-data\\eurasia.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\vectormap-data\\europe.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\vectormap-data\\europe.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\vectormap-data\\usa.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\vectormap-data\\usa.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\vectormap-data\\world.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\vectormap-data\\world.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\vectormap-utils\\dx.vectormaputils.debug.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\vectormap-utils\\dx.vectormaputils.debug.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\vectormap-utils\\dx.vectormaputils.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\vectormap-utils\\dx.vectormaputils.js"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\devextreme\\vectormap-utils\\dx.vectormaputils.node.js",
+      "PackagePath": "staticwebassets\\js\\devextreme\\vectormap-utils\\dx.vectormaputils.node.js"
     },
     {
       "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\js\\site.js",
@@ -83,6 +587,22 @@
     {
       "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css"
+    },
+    {
+      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map"
     },
     {
       "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
@@ -249,36 +769,12 @@
       "PackagePath": "staticwebassets\\mazer-main\\.gitignore"
     },
     {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\CODE_OF_CONDUCT.md",
-      "PackagePath": "staticwebassets\\mazer-main\\CODE_OF_CONDUCT.md"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\CONTRIBUTING.md",
-      "PackagePath": "staticwebassets\\mazer-main\\CONTRIBUTING.md"
-    },
-    {
       "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\LICENSE",
       "PackagePath": "staticwebassets\\mazer-main"
     },
     {
       "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\README.md",
       "PackagePath": "staticwebassets\\mazer-main\\README.md"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\application-chat.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\application-chat.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\application-checkout.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\application-checkout.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\application-email.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\application-email.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\application-gallery.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\application-gallery.html"
     },
     {
       "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\assets\\css\\app.css",
@@ -3769,10 +4265,6 @@
       "PackagePath": "staticwebassets\\mazer-main\\dist\\assets\\vendors\\bootstrap-icons\\inboxes.svg"
     },
     {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\assets\\vendors\\bootstrap-icons\\index.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\assets\\vendors\\bootstrap-icons\\index.html"
-    },
-    {
       "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\assets\\vendors\\bootstrap-icons\\info-circle-fill.svg",
       "PackagePath": "staticwebassets\\mazer-main\\dist\\assets\\vendors\\bootstrap-icons\\info-circle-fill.svg"
     },
@@ -6949,230 +7441,6 @@
       "PackagePath": "staticwebassets\\mazer-main\\dist\\assets\\vendors\\toastify\\toastify.js"
     },
     {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\auth-forgot-password.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\auth-forgot-password.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\auth-login.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\auth-login.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\auth-register.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\auth-register.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\component-alert.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\component-alert.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\component-badge.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\component-badge.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\component-breadcrumb.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\component-breadcrumb.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\component-button.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\component-button.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\component-card.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\component-card.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\component-carousel.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\component-carousel.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\component-dropdown.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\component-dropdown.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\component-list-group.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\component-list-group.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\component-modal.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\component-modal.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\component-navs.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\component-navs.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\component-pagination.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\component-pagination.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\component-progress.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\component-progress.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\component-spinner.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\component-spinner.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\component-tooltip.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\component-tooltip.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\error-403.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\error-403.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\error-404.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\error-404.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\error-500.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\error-500.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\extra-component-avatar.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\extra-component-avatar.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\extra-component-divider.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\extra-component-divider.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\extra-component-rating.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\extra-component-rating.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\extra-component-sweetalert.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\extra-component-sweetalert.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\extra-component-toastify.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\extra-component-toastify.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\form-editor-ckeditor.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\form-editor-ckeditor.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\form-editor-quill.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\form-editor-quill.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\form-editor-summernote.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\form-editor-summernote.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\form-editor-tinymce.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\form-editor-tinymce.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\form-element-checkbox.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\form-element-checkbox.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\form-element-input-group.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\form-element-input-group.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\form-element-input.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\form-element-input.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\form-element-radio.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\form-element-radio.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\form-element-select.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\form-element-select.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\form-element-textarea.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\form-element-textarea.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\form-layout.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\form-layout.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\index.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\index.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\layout-default.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\layout-default.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\layout-horizontal.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\layout-horizontal.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\layout-vertical-1-column.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\layout-vertical-1-column.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\layout-vertical-navbar.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\layout-vertical-navbar.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\mix-manifest.json",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\mix-manifest.json"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\sidebar-items.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\sidebar-items.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\table-datatable.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\table-datatable.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\table.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\table.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\ui-chart-apexcharts.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\ui-chart-apexcharts.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\ui-chart-chartjs.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\ui-chart-chartjs.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\ui-file-uploader.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\ui-file-uploader.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\ui-icons-bootstrap-icons.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\ui-icons-bootstrap-icons.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\ui-icons-dripicons.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\ui-icons-dripicons.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\ui-icons-fontawesome.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\ui-icons-fontawesome.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\ui-map-google-map.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\ui-map-google-map.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\ui-map-jsvectormap.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\ui-map-jsvectormap.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\ui-widgets-chatbox.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\ui-widgets-chatbox.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\ui-widgets-pricing.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\ui-widgets-pricing.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\dist\\ui-widgets-todolist.html",
-      "PackagePath": "staticwebassets\\mazer-main\\dist\\ui-widgets-todolist.html"
-    },
-    {
       "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\package-lock.json",
       "PackagePath": "staticwebassets\\mazer-main\\package-lock.json"
     },
@@ -7183,382 +7451,6 @@
     {
       "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\screenshot.png",
       "PackagePath": "staticwebassets\\mazer-main\\screenshot.png"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\application-chat.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\application-chat.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\application-checkout.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\application-checkout.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\application-email.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\application-email.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\application-gallery.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\application-gallery.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\_utilities.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\_utilities.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\_variables.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\_variables.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\app.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\app.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\bootstrap.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\bootstrap.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_alert.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_alert.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_avatar.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_avatar.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_badge.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_badge.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_breadcrumb.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_breadcrumb.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_buttons.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_buttons.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_card.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_card.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_carousel.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_carousel.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_divider.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_divider.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_dropdowns.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_dropdowns.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_forms.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_forms.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_icons.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_icons.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_modal.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_modal.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_navbar.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_navbar.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_navs.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_navs.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_pagination.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_pagination.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_progress.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_progress.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_sidebar.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_sidebar.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\components\\_table.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\components\\_table.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\layouts\\main.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\layouts\\main.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\pages\\auth.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\pages\\auth.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\pages\\chat.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\pages\\chat.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\pages\\email.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\pages\\email.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\pages\\error.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\pages\\error.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\widgets\\chat.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\widgets\\chat.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\assets\\scss\\widgets\\todo.scss",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\assets\\scss\\widgets\\todo.scss"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\auth-forgot-password.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\auth-forgot-password.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\auth-login.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\auth-login.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\auth-register.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\auth-register.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\component-alert.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\component-alert.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\component-badge.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\component-badge.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\component-breadcrumb.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\component-breadcrumb.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\component-button.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\component-button.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\component-card.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\component-card.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\component-carousel.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\component-carousel.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\component-dropdown.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\component-dropdown.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\component-list-group.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\component-list-group.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\component-modal.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\component-modal.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\component-navs.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\component-navs.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\component-pagination.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\component-pagination.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\component-progress.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\component-progress.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\component-spinner.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\component-spinner.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\component-tooltip.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\component-tooltip.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\error-403.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\error-403.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\error-404.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\error-404.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\error-500.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\error-500.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\extra-component-avatar.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\extra-component-avatar.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\extra-component-divider.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\extra-component-divider.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\extra-component-rating.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\extra-component-rating.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\extra-component-sweetalert.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\extra-component-sweetalert.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\extra-component-toastify.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\extra-component-toastify.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\form-editor-ckeditor.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\form-editor-ckeditor.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\form-editor-quill.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\form-editor-quill.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\form-editor-summernote.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\form-editor-summernote.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\form-editor-tinymce.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\form-editor-tinymce.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\form-element-checkbox.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\form-element-checkbox.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\form-element-input-group.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\form-element-input-group.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\form-element-input.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\form-element-input.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\form-element-radio.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\form-element-radio.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\form-element-select.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\form-element-select.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\form-element-textarea.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\form-element-textarea.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\form-layout.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\form-layout.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\index.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\index.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\layout-default.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\layout-default.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\layout-horizontal.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\layout-horizontal.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\layout-vertical-1-column.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\layout-vertical-1-column.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\layout-vertical-navbar.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\layout-vertical-navbar.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\layouts\\auth.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\layouts\\auth.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\layouts\\error.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\layouts\\error.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\layouts\\master.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\layouts\\master.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\layouts\\sidebar.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\layouts\\sidebar.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\layouts\\vertical-1-column.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\layouts\\vertical-1-column.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\layouts\\vertical-navbar.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\layouts\\vertical-navbar.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\sidebar-items.json",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\sidebar-items.json"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\table-datatable.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\table-datatable.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\table.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\table.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\ui-chart-apexcharts.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\ui-chart-apexcharts.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\ui-chart-chartjs.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\ui-chart-chartjs.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\ui-file-uploader.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\ui-file-uploader.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\ui-icons-bootstrap-icons.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\ui-icons-bootstrap-icons.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\ui-icons-dripicons.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\ui-icons-dripicons.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\ui-icons-fontawesome.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\ui-icons-fontawesome.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\ui-map-google-map.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\ui-map-google-map.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\ui-map-jsvectormap.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\ui-map-jsvectormap.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\ui-widgets-chatbox.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\ui-widgets-chatbox.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\ui-widgets-pricing.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\ui-widgets-pricing.html"
-    },
-    {
-      "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\src\\ui-widgets-todolist.html",
-      "PackagePath": "staticwebassets\\mazer-main\\src\\ui-widgets-todolist.html"
     },
     {
       "Id": "C:\\Users\\fatih\\source\\repos\\CrudProject\\CrudProject\\wwwroot\\mazer-main\\webpack.mix.js",

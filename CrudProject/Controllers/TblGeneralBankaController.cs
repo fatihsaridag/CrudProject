@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralBankaController : BaseController<TblGeneralBanka>, IBaseController<TblGeneralBanka>
+    public class TblGeneralBankaController : BaseController<TblGeneralBanka>
     {
         public TblGeneralBankaController(IGenericRepository<TblGeneralBanka> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {

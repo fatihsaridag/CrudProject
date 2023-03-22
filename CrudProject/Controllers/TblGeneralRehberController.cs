@@ -5,8 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblGeneralRehberController : BaseController<TblGeneralRehber>, IBaseController<TblGeneralRehber>
-    {
+    public class TblGeneralRehberController : BaseController<TblGeneralRehber>
+    { 
         public TblGeneralRehberController(IGenericRepository<TblGeneralRehber> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {
         }
