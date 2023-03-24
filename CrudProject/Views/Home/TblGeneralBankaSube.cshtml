@@ -1,0 +1,206 @@
+﻿@using CrudProject.ViewModels
+@model TblGeneralBankaSubeViewModel
+
+
+
+<div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+    </div>
+</div>
+<div id="gridContainer">
+</div>
+
+@section Scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var model = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralBankaSubes));
+            var banka = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralBankas));
+            var Il = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralIls));
+            var Ilce = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralIlces));
+            GridData(model, banka, Il, Ilce);
+        });
+        function GridData(models, banka, Il, Ilce) {
+            $("#gridContainer").dxDataGrid({
+                dataSource: models,
+                columns: [
+                    {
+                        dataField: "Id",
+                    },
+                    {
+                        dataField: "Adi",
+                        caption: "Adi"
+                    },
+                    {
+                        dataField: "Adres",
+                        caption: "Adres"
+                    },
+                    {
+                        dataField: "Telefon",
+                        caption: "Telefon"
+                    },
+                          {
+                        dataField: "Faks",
+                        caption: "Faks"
+                    },
+                          {
+                        dataField: "GenelKodu",
+                        caption: "GenelKodu"
+                    },
+                      {
+                        dataField: "Erpkodu",
+                        caption: "Erpkodu"
+                    },
+                    {
+                        dataField: "Kodu",
+                        caption: "Kodu"
+                    },
+                    {
+                        dataField: "BankaId",
+                        caption: "BankaId",
+                        lookup: {
+                            dataSource: banka,
+                            displayExpr: 'Adi',
+                            valueExpr: 'Id',
+                        }
+                    },
+                     {
+                        dataField: "IlId",
+                        caption: "IlId",
+                        lookup: {
+                            dataSource: Il,
+                            displayExpr: 'Adi',
+                            valueExpr: 'Id',
+                        }
+                    },
+                      {
+                        dataField: "IlceId",
+                        caption: "IlceId",
+                        lookup: {
+                            dataSource: Ilce,
+                            displayExpr: 'Adi',
+                            valueExpr: 'Id',
+                        }
+                    },
+                    {
+                        dataField: "Onaylandi",
+                        caption: "Onaylandi"
+                    },
+                    {
+                        dataField: "Aktif",
+                        caption: "Aktif"
+                    },
+                    {
+                        dataField: "Guid",
+                        caption: "Guid"
+                    },
+                    {
+                        dataField: "DegistirenId",
+                        caption: "DegistirenId"
+                    },
+                    {
+                        dataField: "OlusturanId",
+                        caption: "OlusturanId"
+                    },
+                    {
+                        dataField: "DegisiklikTarih",
+                        caption: "DegisiklikTarih"
+                    },
+                    {
+                        dataField: "OlusturmaTarih",
+                        caption: "OlusturmaTarih"
+                    },
+                    {
+                        dataField: "Revizyon",
+                        caption: "Revizyon"
+                    },
+                    {
+                        dataField: "Silindi",
+                        caption: "Silindi"
+                    }
+                ],
+                paging: {
+                    pageSize: 6
+                },
+                onRowInserted: function (e) {
+                    rowInsert(e.data);
+                },
+                onRowUpdated: function (e) {
+                    rowUpdate(e.data);
+                },
+                onRowRemoved: function (e) {
+                    rowRemove(e.data.Id);
+                },
+                editing: {
+                    mode: 'popup',
+                    allowUpdating: true,
+                    allowAdding: true,
+                    allowDeleting: true,
+                    popup: {
+                        title: 'TblCmsAppMenu Info',
+                        showTitle: true,
+                        width: 700,
+                        height: 525,
+                    },
+                    form: {
+                        items: [
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                items: ['Adi', 'Adres', 'Telefon', 'Faks', 'GenelKodu', 'Erpkodu', 'Kodu', 'IlId', 'IlceId', 'BankaId'],
+                            },
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                caption: 'TblGeneralApplication Base',
+                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
+                            }],
+                    },
+                }
+            });
+        }
+        function rowUpdate(Data) {
+            AjaxMethod('@Url.Action("Put", "TblGeneralBankaSube")', Data);
+        }
+        function rowInsert(Data) {
+            AjaxMethod('@Url.Action("Post", "TblGeneralBankaSube")', Data);
+        }
+        function rowRemove(Data) {
+            DeleteCall('@Url.Action("Delete", "TblGeneralBankaSube")', Data);
+        }
+        function AjaxMethod(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: Data,
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+
+        function DeleteCall(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: { id: Data },
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+    </script>
+}

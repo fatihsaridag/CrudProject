@@ -1,0 +1,109 @@
+﻿@model IEnumerable<TblGeneralBnkHarKynk>
+
+
+
+<div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+    </div>
+</div>
+<div id="gridContainer">
+</div>
+
+@section Scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var model = @Html.Raw(JsonConvert.SerializeObject(Model));
+            GridData(model);
+        });
+        function GridData(models) {
+            $("#gridContainer").dxDataGrid({
+                dataSource: models,
+                columns: [
+                    {
+                        dataField: "KaynakTipId",
+                    },
+                    {
+                        dataField: "Kaynak",
+                        caption: "Kaynak"
+                    }
+                ],
+                paging: {
+                    pageSize: 6
+                },
+                onRowInserted: function (e) {
+                    rowInsert(e.data);
+                },
+                onRowUpdated: function (e) {
+                    rowUpdate(e.data);
+                },
+                onRowRemoved: function (e) {
+                    rowRemove(e.data.Id);
+                },
+                editing: {
+                    mode: 'popup',
+                    allowUpdating: true,
+                    allowAdding: true,
+                    allowDeleting: true,
+                    popup: {
+                        title: 'TblGeneralBnkHarKynk Info',
+                        showTitle: true,
+                        width: 700,
+                        height: 525,
+                    },
+                    form: {
+                        items: [
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                items: ['Kaynak']
+                            }
+                        ],
+                    },
+                }
+            });
+        }
+        function rowUpdate(Data) {
+            AjaxMethod('@Url.Action("Put", "TblGeneralBnkHarKynk")', Data);
+        }
+        function rowInsert(Data) {
+            AjaxMethod('@Url.Action("Post", "TblGeneralBnkHarKynk")', Data);
+        }
+        function rowRemove(Data) {
+            DeleteCall('@Url.Action("Delete", "TblGeneralBnkHarKynk")', Data);
+        }
+        function AjaxMethod(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: Data,
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+
+        function DeleteCall(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: { id: Data },
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+    </script>
+}

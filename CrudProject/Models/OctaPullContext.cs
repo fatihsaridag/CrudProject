@@ -11,6 +11,8 @@ namespace CrudProject.Models
         public OctaPullContext(DbContextOptions<OctaPullContext> options)
             : base(options)
         {
+            
+
         }
 
         public virtual DbSet<DataProtectionKey> DataProtectionKeys { get; set; } = null!;
@@ -142,45 +144,6 @@ namespace CrudProject.Models
                 entity.Property(e => e.Version).HasMaxLength(50);
             });
 
-            modelBuilder.Entity<TblCmsappMenu>(entity =>
-            {
-                entity.ToTable("TblCMSAppMenu");
-
-                entity.HasIndex(e => new { e.ApplicationId, e.Sira, e.MasterId }, "UK_TblCMSAppMenu_App_Sira_Master")
-                    .IsUnique();
-
-                entity.HasIndex(e => e.Guid, "UK_TblCMSAppMenu_Guid")
-                    .IsUnique();
-
-                entity.Property(e => e.Aktif)
-                    .IsRequired()
-                    .HasDefaultValueSql("((1))");
-
-                entity.Property(e => e.Guid).HasDefaultValueSql("(newid())");
-
-                entity.Property(e => e.Icon).HasMaxLength(250);
-
-                entity.Property(e => e.Name).HasMaxLength(50);
-
-                entity.Property(e => e.OlusturanId).HasDefaultValueSql("((-1))");
-
-                entity.Property(e => e.OlusturmaTarih).HasDefaultValueSql("(getdate())");
-
-                entity.Property(e => e.Onaylandi)
-                    .IsRequired()
-                    .HasDefaultValueSql("((1))");
-
-                entity.HasOne(d => d.Master)
-                    .WithMany(p => p.InverseMaster)
-                    .HasForeignKey(d => d.MasterId)
-                    .HasConstraintName("FK_TblCMSAppMenu_TblCMSAppMenu");
-
-                entity.HasOne(d => d.Navigation)
-                    .WithMany(p => p.TblCmsappMenus)
-                    .HasForeignKey(d => d.NavigationId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_TblCMSAppMenu_TblCMSAppNavigation");
-            });
 
             modelBuilder.Entity<TblCmsappNavigation>(entity =>
             {

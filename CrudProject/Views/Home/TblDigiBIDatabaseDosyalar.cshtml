@@ -1,0 +1,134 @@
+﻿
+
+<nav aria-label="breadcrumb">
+    <h3 class="text  text-center text-primary">TblCmsVersion Table</h3>
+</nav>
+<div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+    </div>
+</div>
+<div id="gridContainer">
+</div>
+
+@section Scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            GridData();
+        });
+        function GridData() {
+            let url = "TblDigiBIDatabaseDosyalar";
+            $("#gridContainer").dxDataGrid({
+                dataSource: DevExpress.data.AspNet.createStore({
+                    key: 'Id',
+                    loadUrl: `/${url}/Get`,
+                    insertUrl: `/${url}/Post`,
+                    updateUrl: `/${url}/Put`,
+                    deleteUrl: `/${url}/Delete`,
+                    onBeforeSend(method, ajaxOptions) {
+                        ajaxOptions.xhrFields = { withCredentials: true };
+                    },
+                }),
+                remoteOperations: true,
+                columns: [
+                    {
+                        dataField: "Id",
+                    },
+                    {
+                        dataField: "SubeKodu",
+                        caption: "SubeKodu"
+                    },
+                    {
+                        dataField: "DatabaseId",
+                        caption: "DatabaseId",
+                    },
+                    {
+                        dataField: "DosyaId",
+                        caption: "DosyaId"
+                    },
+                    {
+                        dataField: "FirmaKodu",
+                        caption: "FirmaKodu",
+
+                    },
+                    {
+                        dataField: "IsletmeKodu",
+                        caption: "IsletmeKodu"
+                    },
+                       {
+                        dataField: "Yil",
+                        caption: "Yil"
+                    },
+                    {
+                        dataField: "Guid",
+                        caption: "Guid"
+                    },
+                    {
+                        dataField: "Silindi",
+                        caption: "Silindi"
+                    },
+                    {
+                        dataField: "Onaylandi",
+                        caption: "Onaylandi"
+                    },
+                    {
+                        dataField: "DegistirenId",
+                        caption: "DegistirenId"
+                    },
+                    {
+                        dataField: "OlusturanId",
+                        caption: "OlusturanId"
+                    },
+                    {
+                        dataField: "DegisiklikTarih",
+                        caption: "DegisiklikTarih"
+                    },
+                    {
+                        dataField: "OlusturmaTarih",
+                        caption: "OlusturmaTarih"
+                    },
+                    {
+                        dataField: "Revizyon",
+                        caption: "Revizyon"
+                    }
+                ],
+                editing: {
+                    mode: 'popup',
+                    allowUpdating: true,
+                    allowAdding: true,
+                    allowDeleting: true,
+                    popup: {
+                        title: 'TblCmsNavYetki Info',
+                        showTitle: true,
+                        width: 700,
+                        height: 525,
+                    },
+                    form: {
+                        items: [
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                items: ['Name', 'NavigationId', 'Icon', 'MasterId', 'ApplicationId', 'YeniSekmedeAc', 'DisUrl', 'Sira'],
+                            },
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                caption: 'TblGeneralApplication Base',
+                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
+                            }],
+                    },
+                }
+            });
+        }
+    </script>
+}
+
+
+
+
+
+
+

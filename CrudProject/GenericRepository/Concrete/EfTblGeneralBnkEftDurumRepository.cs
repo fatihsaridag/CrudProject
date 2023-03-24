@@ -3,7 +3,7 @@ using CrudProject.Models;
 
 namespace CrudProject.GenericRepository.Concrete
 {
-    public class EfTblGeneralBnkEftDurumRepository : EfGenericRepository<TblGeneralBnkBelgeDurum>
+    public class EfTblGeneralBnkEftDurumRepository : EfGenericRepository<TblGeneralBnkEftDurum> , ITblGeneralBnkEftDurumRepository
     {
         public EfTblGeneralBnkEftDurumRepository(OctaPullContext context) : base(context)
         {

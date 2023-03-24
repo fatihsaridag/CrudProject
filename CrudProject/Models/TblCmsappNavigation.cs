@@ -5,11 +5,6 @@ namespace CrudProject.Models
 {
     public partial class TblCmsappNavigation
     {
-        public TblCmsappNavigation()
-        {
-            TblCmsappMenus = new HashSet<TblCmsappMenu>();
-        }
-
         public long Id { get; set; }
         public bool Silindi { get; set; }
         public long Revizyon { get; set; }
@@ -25,6 +20,9 @@ namespace CrudProject.Models
         public long ApplicationId { get; set; }
         public string SubUrl { get; set; } = null!;
 
-        public virtual ICollection<TblCmsappMenu> TblCmsappMenus { get; set; }
+
+        public ICollection<TblGeneralFavoriler> Favorilers { get; set;}
+
+
     }
 }

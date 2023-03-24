@@ -1,8 +1,12 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CrudProject.Models
 {
+
+    [Table("TblCmsappMenu")]
     public partial class TblCmsappMenu
     {
         public TblCmsappMenu()
@@ -32,5 +36,6 @@ namespace CrudProject.Models
         public virtual TblCmsappMenu? Master { get; set; }
         public virtual TblCmsappNavigation Navigation { get; set; } = null!;
         public virtual ICollection<TblCmsappMenu> InverseMaster { get; set; }
+
     }
 }

@@ -5,9 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers
 {
-    public class TblDigiBIPaylasimmController : BaseController<TblDigiBipaylasim>
+    public class TblDigiBIDatabaselerController : BaseController<TblDigiBidatabaseler>
     {
-        public TblDigiBIPaylasimmController(IGenericRepository<TblDigiBipaylasim> genericRepository, OctaPullContext context) : base(genericRepository, context)
+        public TblDigiBIDatabaselerController(IGenericRepository<TblDigiBidatabaseler> genericRepository, OctaPullContext context) : base(genericRepository, context)
         {
         }
     }

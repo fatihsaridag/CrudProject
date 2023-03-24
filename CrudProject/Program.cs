@@ -3,6 +3,8 @@ using CrudProject.Models;
 using CrudProject.RepositoryManager.Abstract;
 using CrudProject.RepositoryManager.Concrete;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
+using Newtonsoft.Json;
 
 namespace CrudProject
 {
@@ -22,8 +24,19 @@ namespace CrudProject
 
             builder.Services.AddScoped<IRepositoryManager, EfRepositoryManager>();
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(EfGenericRepository<>));
-            builder.Services.AddRazorPages().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
+            builder.Services.AddRazorPages().AddJsonOptions(options => 
+            
+                options.JsonSerializerOptions.PropertyNamingPolicy = null
+           
+            );
             builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+            JsonConvert.DefaultSettings = () => new JsonSerializerSettings
+            {
+                ReferenceLoopHandling = ReferenceLoopHandling.Serialize,
+                PreserveReferencesHandling = PreserveReferencesHandling.Objects
+            };
+
 
             var app = builder.Build();
 

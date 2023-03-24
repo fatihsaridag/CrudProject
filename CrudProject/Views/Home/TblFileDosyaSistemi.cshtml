@@ -1,0 +1,159 @@
+﻿
+<nav aria-label="breadcrumb">
+    <h3 class="text  text-center text-primary">TblFileDosyaSistemi Table</h3>
+</nav>
+<div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+    </div>
+</div>
+<div id="gridContainer">
+</div>
+
+@section Scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            GridData();
+        });
+        function GridData() {
+            let url = "TblFileDosyaSistemi";
+            $("#gridContainer").dxDataGrid({
+                dataSource: DevExpress.data.AspNet.createStore({
+                    key: 'Id',
+                    loadUrl: `/${url}/Get`,
+                    insertUrl: `/${url}/Post`,
+                    updateUrl: `/${url}/Put`,
+                    deleteUrl: `/${url}/Delete`,
+                    onBeforeSend(method, ajaxOptions) {
+                        ajaxOptions.xhrFields = { withCredentials: true };
+                    },
+                }),
+                remoteOperations: true,
+                columns: [
+                    {
+                        dataField: "Id",
+                    },
+                    {
+                        dataField: "Ad",
+                        caption: "Ad"
+                    },
+                    {
+                        dataField: "Aciklama",
+                        caption: "Aciklama",
+                    },
+                    {
+                        dataField: "Tip",
+                        caption: "Tip"
+                    },
+                    {
+                        dataField: "Yol",
+                        caption: "Yol",
+
+                    },
+                    {
+                        dataField: "Boyut",
+                        caption: "Boyut",
+
+                    },
+                    {
+                        dataField: "Modul",
+                        caption: "Modul",
+
+                    },
+                        {
+                        dataField: "FirmaId",
+                        caption: "FirmaId",
+
+                    },
+                        {
+                        dataField: "SubeId",
+                        caption: "SubeId",
+
+                    },
+                    {
+                        dataField: "UstDosyaId",
+                        caption: "UstDosyaId",  
+
+                    },
+                    {
+                        dataField: "Yil",
+                        caption: "Yil",
+
+                    },
+                    {
+                        dataField: "Aktif",
+                        caption: "Aktif"
+                    },
+                    {
+                        dataField: "Guid",
+                        caption: "Guid"
+                    },
+                    {
+                        dataField: "Silindi",
+                        caption: "Silindi"
+                    },
+                    {
+                        dataField: "Onaylandi",
+                        caption: "Onaylandi"
+                    },
+                    {
+                        dataField: "DegistirenId",
+                        caption: "DegistirenId"
+                    },
+                    {
+                        dataField: "OlusturanId",
+                        caption: "OlusturanId"
+                    },
+                    {
+                        dataField: "DegisiklikTarih",
+                        caption: "DegisiklikTarih"
+                    },
+                    {
+                        dataField: "OlusturmaTarih",
+                        caption: "OlusturmaTarih"
+                    },
+                    {
+                        dataField: "Revizyon",
+                        caption: "Revizyon"
+                    }
+                ],
+                editing: {
+                    mode: 'popup',
+                    allowUpdating: true,
+                    allowAdding: true,
+                    allowDeleting: true,
+                    popup: {
+                        title: 'TblFileDosyaSistemi Info',
+                        showTitle: true,
+                        width: 700,
+                        height: 525,
+                    },
+                    form: {
+                        items: [
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                items: ['Name', 'NavigationId', 'Icon', 'MasterId', 'ApplicationId', 'YeniSekmedeAc', 'DisUrl', 'Sira'],
+                            },
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                caption: 'TblGeneralApplication Base',
+                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
+                            }],
+                    },
+                }
+            });
+        }
+    </script>
+}
+
+
+
+
+
+
+

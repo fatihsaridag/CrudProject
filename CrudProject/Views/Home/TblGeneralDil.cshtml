@@ -1,0 +1,164 @@
+﻿@model IEnumerable<TblGeneralDil>
+
+
+
+<div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+    </div>
+</div>
+<div id="gridContainer">
+</div>
+
+@section Scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var model = @Html.Raw(JsonConvert.SerializeObject(Model));
+            GridData(model);
+        });
+        function GridData(models) {
+            $("#gridContainer").dxDataGrid({
+                dataSource: models,
+                columns: [
+                    {
+                        dataField: "Id",
+                    },
+                    {
+                        dataField: "Kod",
+                        caption: "Kod"
+                    },
+                    {
+                        dataField: "KisaKod",
+                        caption: "KisaKod"
+                    },
+                    {
+                        dataField: "Adi",
+                        caption: "Adi"
+                    },
+                    {
+                        dataField: "Lang",
+                        caption: "Lang"
+                    },
+                     {
+                        dataField: "Aktif",
+                        caption: "Aktif"
+                    },
+                           {
+                        dataField: "Onaylandi",
+                        caption: "Onaylandi"
+                    },
+                           {
+                        dataField: "Silindi",
+                        caption: "Silindi"
+                    },
+                           {
+                        dataField: "Revizyon",
+                        caption: "Revizyon"
+                    },
+                           {
+                        dataField: "OlusturmaTarih",
+                        caption: "OlusturmaTarih"
+                    },
+                           {
+                        dataField: "DegisiklikTarih",
+                        caption: "DegisiklikTarih"
+                    },
+                             {
+                        dataField: "OlusturanId",
+                        caption: "OlusturanId"
+                    },
+                             {
+                        dataField: "DegistirenId",
+                        caption: "DegistirenId"
+                    },
+                    {
+                        dataField: "Guid",
+                        caption: "Guid"
+                    }
+                ],
+                paging: {
+                    pageSize: 6
+                },
+                onRowInserted: function (e) {
+                    rowInsert(e.data);
+                },
+                onRowUpdated: function (e) {
+                    rowUpdate(e.data);
+                },
+                onRowRemoved: function (e) {
+                    rowRemove(e.data.Id);
+                },
+                editing: {
+                    mode: 'popup',
+                    allowUpdating: true,
+                    allowAdding: true,
+                    allowDeleting: true,
+                    popup: {
+                        title: 'TblGeneralDil Info',
+                        showTitle: true,
+                        width: 700,
+                        height: 525,
+                    },
+                    form: {
+                        items: [
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                items: ['Kod', 'KisaKod', 'Adi', 'Lang', 'BankaHareket', 'BankaHareket']
+                            },
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                caption: 'TblGeneralApplication Base',
+                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
+                            }
+                        ],
+                    },
+                }
+            });
+        }
+        function rowUpdate(Data) {
+            AjaxMethod('@Url.Action("Put", "TblGeneralDil")', Data);
+        }
+        function rowInsert(Data) {
+            AjaxMethod('@Url.Action("Post", "TblGeneralDil")', Data);
+        }
+        function rowRemove(Data) {
+            DeleteCall('@Url.Action("Delete", "TblGeneralDil")', Data);
+        }
+        function AjaxMethod(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: Data,
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+
+        function DeleteCall(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: { id: Data },
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+    </script>
+}

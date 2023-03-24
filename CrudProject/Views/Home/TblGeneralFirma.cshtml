@@ -1,0 +1,259 @@
+﻿@using CrudProject.ViewModels;
+@model TblGeneralFirmaViewModel
+
+
+
+<div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+    </div>
+</div>
+<div id="gridContainer">
+</div>
+
+@section Scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var model = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralFirma));
+            var isletme = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralIsletme));
+            var il = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralIl));
+            var koy = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralKoy));
+            var ilce = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralIlce));
+            var ulke = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralUlke));
+            GridData(model,isletme,il,koy,ilce,ulke)
+        });
+        function GridData(models, isletme, il, koy, ilce,ulke) {
+            $("#gridContainer").dxDataGrid({
+                dataSource: models,
+                columns: [
+                    {
+                        dataField: "Id",
+                    },
+                    {
+                        dataField: "Adi",
+                        caption: "Adi"
+                    },
+                     {
+                        dataField: "IsletmeId",
+                        caption: "IsletmeId",
+                          lookup: {
+                            dataSource: isletme,
+                            displayExpr: 'Adi',
+                            valueExpr: 'Id',
+                        }
+                    },
+                    {
+                        dataField: "FirmaKod",
+                        caption: "FirmaKod"
+                    },
+                    {
+                        dataField: "VergiKimlikNo",
+                        caption: "VergiKimlikNo"
+                    },
+                    {
+                        dataField: "VergiDairesi",
+                        caption: "VergiDairesi"
+                    },
+                    {
+                        dataField: "MersisNo",
+                        caption: "MersisNo"
+                    },
+                    {
+                        dataField: "TicariSicilNo",
+                        caption: "TicariSicilNo"
+                    },
+                    {
+                        dataField: "WebSiteAdres",
+                        caption: "WebSiteAdres"
+                    },
+                    {
+                        dataField: "Email",
+                        caption: "Email"
+                    },
+                    {
+                        dataField: "AcikAdresMi",
+                        caption: "AcikAdresMi"
+                    },
+                    {
+                        dataField: "Adres",
+                        caption: "Adres"
+                    },
+                    {
+                        dataField: "UlkeId",
+                        caption: "UlkeId",
+                         lookup: {
+                            dataSource: ulke,
+                            displayExpr: 'Adi',
+                            valueExpr: 'Id',
+                        }
+                    },
+                    {
+                        dataField: "IlId",
+                        caption: "IlId",
+                         lookup: {
+                            dataSource: il,
+                            displayExpr: 'Adi',
+                            valueExpr: 'Id',
+                        }
+                    },
+                    {
+                        dataField: "IlceId",
+                        caption: "IlceId",
+                        lookup: {
+                            dataSource: ilce,
+                            displayExpr: 'Adi',
+                            valueExpr: 'Id',
+                        }
+                    },
+                    {
+                        dataField: "MahKoyId",
+                        caption: "MahKoyId",
+                         lookup: {
+                            dataSource: koy,
+                            displayExpr: 'Adi',
+                            valueExpr: 'Id',
+                        }
+                    },
+                    {
+                        dataField: "KapiNo",
+                        caption: "KapiNo"
+                    },
+                    {
+                        dataField: "DaireNo",
+                        caption: "DaireNo"
+                    },
+                        {
+                        dataField: "TelNo",
+                        caption: "TelNo"
+                    },
+                        {
+                        dataField: "FaxNo",
+                        caption: "FaxNo"
+                    },
+                        {
+                        dataField: "YeniAlan",
+                        caption: "YeniAlan"
+                    },
+                    {
+                        dataField: "Aktif",
+                        caption: "Aktif"
+                    },
+                    {
+                        dataField: "Onaylandi",
+                        caption: "Onaylandi"
+                    },
+                    {
+                        dataField: "Silindi",
+                        caption: "Silindi"
+                    },
+                    {
+                        dataField: "Revizyon",
+                        caption: "Revizyon"
+                    },
+                    {
+                        dataField: "OlusturmaTarih",
+                        caption: "OlusturmaTarih"
+                    },
+                    {
+                        dataField: "DegisiklikTarih",
+                        caption: "DegisiklikTarih"
+                    },
+                    {
+                        dataField: "OlusturanId",
+                        caption: "OlusturanId"
+                    },
+                    {
+                        dataField: "DegistirenId",
+                        caption: "DegistirenId"
+                    },
+                    {
+                        dataField: "Guid",
+                        caption: "Guid"
+                    }
+                ],
+                paging: {
+                    pageSize: 6
+                },
+                onRowInserted: function (e) {
+                    rowInsert(e.data);
+                },
+                onRowUpdated: function (e) {
+                    rowUpdate(e.data);
+                },
+                onRowRemoved: function (e) {
+                    rowRemove(e.data.Id);
+                },
+                editing: {
+                    mode: 'popup',
+                    allowUpdating: true,
+                    allowAdding: true,
+                    allowDeleting: true,
+                    popup: {
+                        title: 'TblGeneralFirma Info',
+                        showTitle: true,
+                        width: 700,
+                        height: 525,
+                    },
+                    form: {
+                        items: [
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                items: ['IsletmeId', 'FirmaKod', 'Adi', 'VergiKimlikNo', 'VergiDairesi', 'MersisNo', 'TicariSicilNo', 'WebSiteAdres', 'Email', 'AcikAdresMi', 'Adres', 'UlkeId', 'IlId', 'IlceId', 'MahKoyId', 'KapiNo','DaireNo','TelNo','FaxNo','YeniAlan']
+                            },
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                caption: 'TblGeneralApplication Base',
+                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
+                            }
+                        ],
+                    },
+                }
+            });
+        }
+        function rowUpdate(Data) {
+            AjaxMethod('@Url.Action("Put", "TblGeneralFirma")', Data);
+        }
+        function rowInsert(Data) {
+            AjaxMethod('@Url.Action("Post", "TblGeneralFirma")', Data);
+        }
+        function rowRemove(Data) {
+            DeleteCall('@Url.Action("Delete", "TblGeneralFirma")', Data);
+        }
+        function AjaxMethod(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: Data,
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+
+        function DeleteCall(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: { id: Data },
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+    </script>
+}

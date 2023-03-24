@@ -1,0 +1,171 @@
+﻿
+
+<nav aria-label="breadcrumb">
+    <h3 class="text  text-center text-primary">TblDigiBIDatabaseler Table</h3>
+</nav>
+<div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+    </div>
+</div>
+<div id="gridContainer">
+</div>
+
+@section Scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            GridData();
+        });
+        function GridData() {
+            let url = "TblDigiBIDatabaseler";
+            $("#gridContainer").dxDataGrid({
+                dataSource: DevExpress.data.AspNet.createStore({
+                    key: 'Id',
+                    loadUrl: `/${url}/Get`,
+                    insertUrl: `/${url}/Post`,
+                    updateUrl: `/${url}/Put`,
+                    deleteUrl: `/${url}/Delete`,
+                    onBeforeSend(method, ajaxOptions) {
+                        ajaxOptions.xhrFields = { withCredentials: true };
+                    },
+                }),
+                remoteOperations: true,
+                columns: [
+                    {
+                        dataField: "Id",
+                    },
+                    {
+                        dataField: "UserName",
+                        caption: "UserName"
+                    },
+                    {
+                        dataField: "ServerName",
+                        caption: "ServerName",
+                    },
+                    {
+                        dataField: "Password",
+                        caption: "Password"
+                    },
+                    {
+                        dataField: "DatabaseName",
+                        caption: "DatabaseName",
+
+                    },
+                    {
+                        dataField: "DosyaId",
+                        caption: "DosyaId",
+
+                    },
+                     {
+                        dataField: "Tip",
+                        caption: "Tip",
+
+                    },
+                    {
+                        dataField: "BaglantiAdi",
+                        caption: "BaglantiAdi",
+
+                    },
+                           {
+                        dataField: "IsletmeFirmaEkle",
+                        caption: "IsletmeFirmaEkle",
+
+                    },
+                     {
+                        dataField: "FirmaId",
+                        caption: "FirmaId",
+
+                    },
+                    {
+                        dataField: "IsletmeId",
+                        caption: "IsletmeId",
+
+                    },
+                    {
+                        dataField: "SubeId",
+                        caption: "SubeId",
+
+                    },
+                      {
+                        dataField: "Yil",
+                        caption: "Yil",
+
+                    },
+                         
+                    {
+                        dataField: "Aktif",
+                        caption: "Aktif"
+                    },
+                    {
+                        dataField: "Guid",
+                        caption: "Guid"
+                    },
+                    {
+                        dataField: "Silindi",
+                        caption: "Silindi"
+                    },
+                    {
+                        dataField: "Onaylandi",
+                        caption: "Onaylandi"
+                    },
+                    {
+                        dataField: "DegistirenId",
+                        caption: "DegistirenId"
+                    },
+                    {
+                        dataField: "OlusturanId",
+                        caption: "OlusturanId"
+                    },
+                    {
+                        dataField: "DegisiklikTarih",
+                        caption: "DegisiklikTarih"
+                    },
+                    {
+                        dataField: "OlusturmaTarih",
+                        caption: "OlusturmaTarih"
+                    },
+                    {
+                        dataField: "Revizyon",
+                        caption: "Revizyon"
+                    }
+                ],
+                editing: {
+                    mode: 'popup',
+                    allowUpdating: true,
+                    allowAdding: true,
+                    allowDeleting: true,
+                    popup: {
+                        title: 'TblDigiBIDatabaseler Info',
+                        showTitle: true,
+                        width: 700,
+                        height: 525,
+                    },
+                    form: {
+                        items: [
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                items: ['Name', 'NavigationId', 'Icon', 'MasterId', 'ApplicationId', 'YeniSekmedeAc', 'DisUrl', 'Sira'],
+                            },
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                caption: 'TblGeneralApplication Base',
+                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
+                            }],
+                    },
+                }
+            });
+        }
+    </script>
+}
+
+
+
+
+
+
+

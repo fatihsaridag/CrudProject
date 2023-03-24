@@ -90,37 +90,37 @@
                                     <a  asp-controller="DataProtectionKeys" asp-action="Index" >DataProtectionKeys</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="component-badge.html">TblCMSAppMenu</a>
+                                    <a asp-controller="Home" asp-action="TblCMSAppMenu">TblCMSAppMenu</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="component-breadcrumb.html">TblCMSAppNavigation</a>
+                                    <a asp-controller="Home" asp-action="TblCMSAppNavigation">TblCMSAppNavigation</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="component-button.html">TblCMSNavYetki</a>
+                                    <a asp-controller="Home" asp-action="TblCmsnavYetki">TblCMSNavYetki</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="component-card.html">TblCmsVersion</a>
+                                    <a asp-controller="Home" asp-action="TblCmsVersion" >TblCmsVersion</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="component-carousel.html">TblDigiBIDatabaseDosyalar</a>
+                                    <a asp-controller="Home" asp-action="TblDigiBIDatabaseDosyalar">TblDigiBIDatabaseDosyalar</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="component-dropdown.html">TblDigiBIDatabaseler</a>
+                                    <a asp-controller="Home" asp-action="TblDigiBIDatabaseler">TblDigiBIDatabaseler</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="component-list-group.html">TblDigiBIDosyaSistemi</a>
+                                    <a asp-controller="Home" asp-action="TblDigiBIDosyaSistemi">TblDigiBIDosyaSistemi</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="component-modal.html">TblDigiBIFavoriDosyalar</a>
+                                    <a asp-controller="Home" asp-action="TblDigiBIFavoriDosyalar">TblDigiBIFavoriDosyalar</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="component-navs.html">TblDigiBIPaylasim</a>
+                                    <a asp-controller="Home" asp-action="TblDigiBIPaylasim">TblDigiBIPaylasim</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="component-pagination.html">TblFileDosyaSistemi</a>
+                                    <a asp-controller="Home" asp-action="TblFileDosyaSistemi">TblFileDosyaSistemi</a>
                                 </li>
                                 <li class="submenu-item ">
-                                    <a href="component-progress.html">TblFileFavoriDosyalar</a>
+                                    <a asp-controller="Home" asp-action="TblFileFavoriDosyalar">TblFileFavoriDosyalar</a>
                                 </li>
                                 <li class="submenu-item ">
                                     <a asp-controller="Home" asp-action="TblGeneralApplications" asp>TblGeneralApplication</a>
@@ -353,28 +353,9 @@
                     <div class="col-12 col-lg-12">
                         <div class="row">
                             <div class="col-12">
-                                <div class="card">
-
-                                    <div class="content-body">
-                                        <div class="container pd-x-0">
-                                            <div class="d-sm-flex align-items-center justify-content-between mg-b-20 mg-lg-b-25 mg-xl-b-30">
-                                                <div>
-                                                    <nav aria-label="breadcrumb">
-                                                        <ol class="breadcrumb breadcrumb-style1 mg-b-10">
-                                                            <li class="breadcrumb-item"><a href="/">OctaPull</a></li>
-                                                            <li class="breadcrumb-item active pageHeader" aria-current="page"></li>
-                                                        </ol>
-                                                    </nav>
-                                                    <h4 class="mg-b-0 tx-spacing--1 pageHeader"></h4>
-                                                </div>
-                                            </div>
-
-
-                                   @RenderBody()
-
-                                </div>
-                            </div>
-                        
+                                <div  class="card mt-3">
+                                
+                                    @RenderBody()
                         </div>
                     </div>
                 

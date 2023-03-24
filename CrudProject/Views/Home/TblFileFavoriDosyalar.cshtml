@@ -1,0 +1,209 @@
+﻿@model TblFileFavoriDosyalarViewModel
+@using CrudProject.ViewModels
+
+
+
+<div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+    </div>
+</div>
+<div id="gridContainer">
+</div>
+
+@section Scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var model = @Html.Raw(JsonConvert.SerializeObject(Model.TblFileFavoriDosyalar));
+            var TblSsokullanici = @Html.Raw(JsonConvert.SerializeObject(Model.TblSsokullanici));
+            var TblGeneralSube = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralSube));
+            var TblFileDosyaSsistemi = @Html.Raw(JsonConvert.SerializeObject(Model.TblFileDosyaSsistemi));
+            var TblGeneralIsletme = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralIsletme));
+            GridData(model, TblSsokullanici, TblGeneralSube, TblGeneralFirma, TblFileFavoriDosyalar, TblGeneralIsletme)
+        });
+        function GridData(model, TblSsokullanici, TblGeneralSube, TblGeneralFirma, TblFileDosyaSsistemi, TblGeneralIsletme) {
+            $("#gridContainer").dxDataGrid({
+                dataSource: models,
+                columns: [
+                    {
+                        dataField: "Id",
+                    },
+                    {
+                        dataField: "IsletmeId",
+                        caption: "IsletmeId",
+                              lookup: {
+                            dataSource: TblGeneralIsletme,
+                            displayExpr: 'Adi',
+                            valueExpr: 'Id'
+                        }
+                    },
+                    {
+                        dataField: "FirmaId",
+                        caption: "FirmaId",
+                        lookup: {
+                            dataSource: TblGeneralFirma,
+                            displayExpr: 'Adi',
+                            valueExpr: 'Id'
+                        }
+                    },
+                    {
+                        dataField: "SubeId",
+                        caption: "SubeId",
+                              lookup: {
+                            dataSource: TblGeneralSube,
+                            displayExpr: 'Adi',
+                            valueExpr: 'Id'
+                        }
+                    },
+                    {
+                        dataField: "DosyaId",
+                        caption: "DosyaId",
+                              lookup: {
+                            dataSource: TblFileDosyaSsistemi,
+                            displayExpr: 'Ad',
+                            valueExpr: 'Id'
+                        }
+
+                    },
+                    {
+                        dataField: "UserId",
+                        caption: "UserId",
+                              lookup: {
+                            dataSource: TblSsokullanici,
+                            displayExpr: 'Name',
+                            valueExpr: 'Id'
+                        }
+
+                    },
+                    {
+                        dataField: "Yil",
+                        caption: "Yil"
+
+                    },
+                    {
+                        dataField: "Aktif",
+                        caption: "Aktif"
+                    },
+                    {
+                        dataField: "Guid",
+                        caption: "Guid"
+                    },
+                    {
+                        dataField: "Silindi",
+                        caption: "Silindi"
+                    },
+                    {
+                        dataField: "Onaylandi",
+                        caption: "Onaylandi"
+                    },
+                    {
+                        dataField: "DegistirenId",
+                        caption: "DegistirenId"
+                    },
+                    {
+                        dataField: "OlusturanId",
+                        caption: "OlusturanId"
+                    },
+                    {
+                        dataField: "DegisiklikTarih",
+                        caption: "DegisiklikTarih"
+                    },
+                    {
+                        dataField: "OlusturmaTarih",
+                        caption: "OlusturmaTarih"
+                    },
+                    {
+                        dataField: "Revizyon",
+                        caption: "Revizyon"
+                    }
+                ],
+                paging: {
+                    pageSize: 6
+                },
+                onRowInserted: function (e) {
+                    rowInsert(e.data);
+                },
+                onRowUpdated: function (e) {
+                    rowUpdate(e.data);
+                },
+                onRowRemoved: function (e) {
+                    rowRemove(e.data.Id);
+                },
+                editing: {
+                    mode: 'popup',
+                    allowUpdating: true,
+                    allowAdding: true,
+                    allowDeleting: true,
+                    popup: {
+                        title: 'TblFileFavoriDosyalar Info',
+                        showTitle: true,
+                        width: 700,
+                        height: 525,
+                    },
+                    form: {
+                        items: [
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                items: ['Name', 'NavigationId', 'Icon', 'MasterId', 'YeniSekmedeAc', 'DisUrl', 'Sira', 'ApplicationId'],
+                            },
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                caption: 'TblGeneralApplication Base',
+                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi', 'SystemApp', 'ParametreAktif', 'DisariAcik'],
+                            }],
+                    },
+                }
+            });
+        }
+        function rowUpdate(Data) {
+            AjaxMethod('@Url.Action("Put", "TblFileFavoriDosyalar")', Data);
+        }
+        function rowInsert(Data) {
+            AjaxMethod('@Url.Action("Post", "TblFileFavoriDosyalar")', Data);
+        }
+        function rowRemove(Data) {
+            DeleteCall('@Url.Action("Delete", "TblFileFavoriDosyalar")', Data);
+        }
+        function AjaxMethod(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: Data,
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+
+        function DeleteCall(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: { id: Data },
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+    </script>
+}
+
+
+
+
+

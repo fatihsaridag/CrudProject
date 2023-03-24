@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Caching.Memory;
+using System.Net.Http.Formatting;
 
 namespace CrudProject.Controllers.GenericBaseController
 {
@@ -22,16 +23,12 @@ namespace CrudProject.Controllers.GenericBaseController
             _context = context;
         }
 
- 
-
         public  IActionResult Post(TEntity entity)
         {
-            if (ModelState.IsValid)  
-            {
+          
                 _genericRepository.Create(entity);
+                _context.SaveChanges();
                 return Json(true);
-            }
-            return Json(false);
 
         }
 
@@ -66,6 +63,7 @@ namespace CrudProject.Controllers.GenericBaseController
 
         public IActionResult Put(TEntity entity)
         {
+
             _genericRepository.Update(entity);
             _context.SaveChanges();
             return Json(true);

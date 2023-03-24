@@ -22,5 +22,6 @@ namespace CrudProject.Models
         public long? KullaniciId { get; set; }
         public long? KulGrupId { get; set; }
         public long NavigationId { get; set; }
+
     }
 }

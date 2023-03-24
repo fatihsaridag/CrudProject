@@ -3,7 +3,7 @@ using CrudProject.Models;
 
 namespace CrudProject.GenericRepository.Concrete
 {
-    public class EfTblGeneralFavorilerRepository : EfGenericRepository<TblGeneralFavoriler>
+    public class EfTblGeneralFavorilerRepository : EfGenericRepository<TblGeneralFavoriler> , ITblGeneralFavorilerRepository
     {
         public EfTblGeneralFavorilerRepository(OctaPullContext context) : base(context)
         {
