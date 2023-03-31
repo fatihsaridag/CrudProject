@@ -1,8 +1,4 @@
-﻿@using CrudProject.ViewModels;
-@model TblGeneralEfatMukellefMailViewModel
-
-
-
+﻿ 
 <div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
@@ -12,14 +8,14 @@
 </div>
 
 @section Scripts{
-
     <script type="text/javascript">
         $(document).ready(function () {
-            var model = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralEfatMukellefMail));
-            var mukellef = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralEfatMukellef));
-            GridData(model,mukellef)
+            $.getJSON('/TblGeneralEFatMukellefMail/Get', function (model) {
+                GridData(model)
+            })
         });
-        function GridData(models,mukellef) {
+        function GridData(models) {
+            let url = "TblGeneralEFatMukellefMail";
             $("#gridContainer").dxDataGrid({
                 dataSource: models,
                 columns: [
@@ -30,9 +26,15 @@
                         dataField: "MukellefId",
                         caption: "MukellefId",
                         lookup: {
-                            dataSource: mukellef,
-                            displayExpr: 'Unvan',
-                            valueExpr: 'Id',
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblGeneralEFatMukellefLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
                     },
                     {
@@ -98,7 +100,7 @@
                     allowAdding: true,
                     allowDeleting: true,
                     popup: {
-                        title: 'TblGeneralEfatMukellefMail Info',
+                        title: 'TblGeneralEFatMukellefMail Info',
                         showTitle: true,
                         width: 700,
                         height: 525,
@@ -115,7 +117,7 @@
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                caption: 'TblGeneralApplication Base',
+                                caption: 'TblGeneralEfatMukellefMail Base',
                                 items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
                             }
                         ],
@@ -124,10 +126,10 @@
             });
         }
         function rowUpdate(Data) {
-            AjaxMethod('@Url.Action("Put", "TblGeneralEfatMukellefMail")', Data);
+            AjaxMethod('@Url.Action("Put", "TblGeneralEFatMukellefMail")', Data);
         }
         function rowInsert(Data) {
-            AjaxMethod('@Url.Action("Post", "TblGeneralEfatMukellefMail")', Data);
+            AjaxMethod('@Url.Action("Post", "TblGeneralEFatMukellefMail")', Data);
         }
         function rowRemove(Data) {
             DeleteCall('@Url.Action("Delete", "TblGeneralEfatMukellefMail")', Data);

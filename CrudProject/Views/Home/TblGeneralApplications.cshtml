@@ -1,8 +1,4 @@
-﻿@model List<TblGeneralApplication>
-
-
-
-<div class="row">
+﻿<div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
     </div>
@@ -11,13 +7,15 @@
 </div>
 
 @section Scripts{
-
+    
     <script type="text/javascript">
         $(document).ready(function () {
-            var model = @Html.Raw(JsonConvert.SerializeObject(Model));
-            GridData(model);
+            $.getJSON('/TblGeneralApplications/Get', function (model) {
+                GridData(model)
+            })
         });
         function GridData(models) {
+            let url = "TblGeneralApplications";
             $("#gridContainer").dxDataGrid({
                 dataSource: models, 
                 columns: [
@@ -48,7 +46,8 @@
                         dataField: "Guid",
                         caption: "Guid"
                     },
-                        {
+                    
+                    {
                         dataField: "Aktif",
                         caption: "Aktif"
                     },
@@ -93,9 +92,13 @@
                         caption: "SystemApp"
                     },
                         {
+                        dataField: "ParametreAktif",
+                        caption: "ParametreAktif"
+                    },
+                        {
                         dataField: "DisariAcik",
                         caption: "DisariAcik"
-                    },
+                    }
                 ],
                 paging: {
                     pageSize: 6
@@ -115,7 +118,7 @@
                     allowAdding: true,
                     allowDeleting: true,
                     popup: {
-                        title: 'TblGeneralApplication Info',
+                        title: 'TblGeneralApplications Info',
                         showTitle: true,
                         width: 700,
                         height: 525,
@@ -129,10 +132,10 @@
                             items: ['Application', 'Description', 'Path', 'IconHtml', 'BaseUrl', 'BaseApiOnEk','Sira'],
                         }, 
                         {
-                            itemType: 'group',
+                            itemType: 'group', 
                             colCount: 2,
                             colSpan: 2,
-                            caption: 'TblGeneralApplication Base',
+                                caption: 'TblGeneralApplications Base',
                                 items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi', 'SystemApp', 'ParametreAktif', 'DisariAcik'],
                         }],
                     },

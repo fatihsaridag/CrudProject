@@ -1,9 +1,4 @@
-﻿ 
-
-<nav aria-label="breadcrumb">
-    <h3 class="text  text-center text-primary">TblCmsVersion Table</h3>
-</nav>
-<div class="row">
+﻿<div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
     </div>
@@ -15,42 +10,38 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            GridData();
+            $.getJSON('/TblCmsVersion/Get', function (model) {
+                GridData(model)
+            })
         });
-        function GridData() {
+        function GridData(models) {
             let url = "TblCmsVersion";
             $("#gridContainer").dxDataGrid({
-                dataSource: DevExpress.data.AspNet.createStore({
-                    key: 'Id',
-                    loadUrl: `/${url}/Get`,
-                    insertUrl: `/${url}/Post`,
-                    updateUrl: `/${url}/Put`,
-                    deleteUrl: `/${url}/Delete`,
-                    onBeforeSend(method, ajaxOptions) {
-                        ajaxOptions.xhrFields = { withCredentials: true };
-                    },
-                }),
-                remoteOperations: true,
+                dataSource: models,
                 columns: [
                     {
                         dataField: "Id",
                     },
                     {
-                        dataField: "Version",
-                        caption: "Version"
-                    },
-                    {
-                        dataField: "Link",
-                        caption: "Link",
+                        dataField: "AppType",
+                        caption: "AppType"
                     },
                     {
                         dataField: "PlatformType",
                         caption: "PlatformType"
                     },
                     {
-                        dataField: "AppType",
-                        caption: "AppType",
+                        dataField: "Version",
+                        caption: "Version"
 
+                    },
+                    {
+                        dataField: "Link",
+                        caption: "Link"
+                    },
+                    {
+                        dataField: "Onaylandi",
+                        caption: "Onaylandi"
                     },
                     {
                         dataField: "Aktif",
@@ -59,14 +50,6 @@
                     {
                         dataField: "Guid",
                         caption: "Guid"
-                    },
-                    {
-                        dataField: "Silindi",
-                        caption: "Silindi"
-                    },
-                    {
-                        dataField: "Onaylandi",
-                        caption: "Onaylandi"
                     },
                     {
                         dataField: "DegistirenId",
@@ -87,15 +70,31 @@
                     {
                         dataField: "Revizyon",
                         caption: "Revizyon"
+                    },
+                    {
+                        dataField: "Silindi",
+                        caption: "Silindi"
                     }
                 ],
+                paging: {
+                    pageSize: 6
+                },
+                onRowInserted: function (e) {
+                    rowInsert(e.data);
+                },
+                onRowUpdated: function (e) {
+                    rowUpdate(e.data);
+                },
+                onRowRemoved: function (e) {
+                    rowRemove(e.data.Id);
+                },
                 editing: {
                     mode: 'popup',
                     allowUpdating: true,
                     allowAdding: true,
                     allowDeleting: true,
                     popup: {
-                        title: 'TblCmsNavYetki Info',
+                        title: 'TblCmsVersion Info',
                         showTitle: true,
                         width: 700,
                         height: 525,
@@ -106,25 +105,59 @@
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                items: ['Name', 'NavigationId', 'Icon', 'MasterId', 'ApplicationId', 'YeniSekmedeAc', 'DisUrl', 'Sira'],
+                                items: ['AppType', 'PlatformType', 'Version', 'Link']
                             },
                             {
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                caption: 'TblGeneralApplication Base',
+                                caption: 'TblCmsVersion Base',
                                 items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
-                            }],
+                            }
+                        ],
                     },
+                }
+            });
+        }
+        function rowUpdate(Data) {
+            AjaxMethod('@Url.Action("Put", "TblCmsVersion")', Data);
+        }
+        function rowInsert(Data) {
+            AjaxMethod('@Url.Action("Post", "TblCmsVersion")', Data);
+        }
+        function rowRemove(Data) {
+            DeleteCall('@Url.Action("Delete", "TblCmsVersion")', Data);
+        }
+        function AjaxMethod(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: Data,
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+
+        function DeleteCall(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: { id: Data },
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
                 }
             });
         }
     </script>
 }
-
-
-
-
-
-
-

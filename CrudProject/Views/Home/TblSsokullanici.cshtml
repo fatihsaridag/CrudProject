@@ -1,0 +1,227 @@
+﻿<div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4">
+    </div>
+</div>
+<div id="gridContainer">
+</div>
+
+@section Scripts{
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON('/TblSSOKullanici/Get', function (model) {
+                GridData(model)
+            })
+        });
+        function GridData(models) {
+            let url = "TblSSOKullanici";
+            $("#gridContainer").dxDataGrid({
+                dataSource: models,
+                columns: [
+                    {
+                        dataField: "Id",
+                    },
+                    {
+                        dataField: "UserName",
+                        caption: "UserName"
+                    },
+                     {
+                        dataField: "Password",
+                        caption: "Password"
+                    },
+                     {
+                        dataField: "Name",
+                        caption: "Name"
+                    },
+                     {
+                        dataField: "SurName",
+                        caption: "SurName"
+                    },
+                     {
+                        dataField: "Email",
+                        caption: "Email"
+                    },
+                       {
+                        dataField: "Active",
+                        caption: "Active"
+                    },
+                        {
+                        dataField: "Approved",
+                        caption: "Approved"
+                    },
+                     {
+                        dataField: "IsAdmin",
+                        caption: "IsAdmin"
+                    },
+                        {
+                        dataField: "IsSuperAdmin",
+                        caption: "IsSuperAdmin"
+                    },
+                        {
+                        dataField: "PasswordExpireDate",
+                        caption: "PasswordExpireDate" ,
+                        dataType: 'date'
+                    },
+                        {
+                        dataField: "IsNewPassword",
+                        caption: "IsNewPassword"
+                    },
+                        {
+                        dataField: "TimeZone",
+                        caption: "TimeZone"
+                    },
+                    {
+                        dataField: "KullaniciTipId",
+                        caption: "KullaniciTipId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblSsokullaniciTipiLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
+                    },
+                    {
+                        dataField: "ProfilResmi",
+                        caption: "ProfilResmi"  
+                    },
+                    {
+                        dataField: "Telefon",
+                        caption: "Telefon"
+                    },
+                    {
+                        dataField: "AuthType",
+                        caption: "AuthType"
+                    },
+                    {
+                        dataField: "DogumGunu",
+                        caption: "DogumGunu",
+                        dataType: 'date'
+                    },
+                    {
+                        dataField: "Onaylandi",
+                        caption: "Onaylandi"
+                    },
+                    {
+                        dataField: "Aktif",
+                        caption: "Aktif"
+                    },
+                    {
+                        dataField: "Guid",
+                        caption: "Guid"
+                    },
+                    {
+                        dataField: "DegistirenId",
+                        caption: "DegistirenId"
+                    },
+                    {
+                        dataField: "OlusturanId",
+                        caption: "OlusturanId"
+                    },
+                    {
+                        dataField: "DegisiklikTarih",
+                        caption: "DegisiklikTarih"
+                    },
+                    {
+                        dataField: "OlusturmaTarih",
+                        caption: "OlusturmaTarih"
+                    },
+                    {
+                        dataField: "Revizyon",
+                        caption: "Revizyon"
+                    },
+                    {
+                        dataField: "Silindi",
+                        caption: "Silindi"
+                    }
+                ],
+                paging: {
+                    pageSize: 6
+                },
+                onRowInserted: function (e) {
+                    rowInsert(e.data);
+                },
+                onRowUpdated: function (e) {
+                    rowUpdate(e.data);
+                },
+                onRowRemoved: function (e) {
+                    rowRemove(e.data.Id);
+                },
+                editing: {
+                    mode: 'popup',
+                    allowUpdating: true,
+                    allowAdding: true,
+                    allowDeleting: true,
+                    popup: {
+                        title: 'TblSSOKullanici Info',
+                        showTitle: true,
+                        width: 700,
+                        height: 525,
+                    },
+                    form: {
+                        items: [
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                items: ['UserName', 'Password', 'Name', 'SurName', 'Email', 'Active','Approved', 'IsAdmin', 'IsSuperAdmin', 'PasswordExpireDate', 'IsNewPassword', 'TimeZone', 'KullaniciTipId', 'ProfilResmi', 'Telefon', 'AuthType', 'DogumGunu']
+                            },
+                            {
+                                itemType: 'group',
+                                colCount: 2,
+                                colSpan: 2,
+                                caption: 'TblSsodavetDetay Base',
+                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
+                            }
+                        ],
+                    },
+                }
+            });
+        }
+        function rowUpdate(Data) {
+            AjaxMethod('@Url.Action("Put", "TblSSOKullanici")', Data);
+        }
+        function rowInsert(Data) {
+            AjaxMethod('@Url.Action("Post", "TblSSOKullanici")', Data);
+        }
+        function rowRemove(Data) {
+            DeleteCall('@Url.Action("Delete", "TblSSOKullanici")', Data);
+        }
+        function AjaxMethod(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: Data,
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+
+        function DeleteCall(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: { id: Data },
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+    </script>
+}

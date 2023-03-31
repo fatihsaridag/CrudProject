@@ -1,7 +1,6 @@
 ﻿using CrudProject.Controllers.GenericBaseController;
 using CrudProject.GenericRepository;
 using CrudProject.Models;
-using CrudProject.RepositoryManager.Abstract;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CrudProject.Controllers

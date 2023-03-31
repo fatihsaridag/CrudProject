@@ -1,8 +1,4 @@
-﻿@model TblFileFavoriDosyalarViewModel
-@using CrudProject.ViewModels
-
-
-
+﻿
 <div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
@@ -15,14 +11,12 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            var model = @Html.Raw(JsonConvert.SerializeObject(Model.TblFileFavoriDosyalar));
-            var TblSsokullanici = @Html.Raw(JsonConvert.SerializeObject(Model.TblSsokullanici));
-            var TblGeneralSube = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralSube));
-            var TblFileDosyaSsistemi = @Html.Raw(JsonConvert.SerializeObject(Model.TblFileDosyaSsistemi));
-            var TblGeneralIsletme = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralIsletme));
-            GridData(model, TblSsokullanici, TblGeneralSube, TblGeneralFirma, TblFileFavoriDosyalar, TblGeneralIsletme)
+            $.getJSON('/TblFileFavoriDosyalar/Get', function (model) {
+                GridData(model)
+            })
         });
-        function GridData(model, TblSsokullanici, TblGeneralSube, TblGeneralFirma, TblFileDosyaSsistemi, TblGeneralIsletme) {
+        function GridData(models) {
+            let url = "TblFileFavoriDosyalar";
             $("#gridContainer").dxDataGrid({
                 dataSource: models,
                 columns: [
@@ -30,51 +24,79 @@
                         dataField: "Id",
                     },
                     {
-                        dataField: "IsletmeId",
-                        caption: "IsletmeId",
-                              lookup: {
-                            dataSource: TblGeneralIsletme,
-                            displayExpr: 'Adi',
-                            valueExpr: 'Id'
-                        }
-                    },
-                    {
                         dataField: "FirmaId",
                         caption: "FirmaId",
                         lookup: {
-                            dataSource: TblGeneralFirma,
-                            displayExpr: 'Adi',
-                            valueExpr: 'Id'
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/FirmaLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
+                    },
+                    {
+                        dataField: "IsletmeId",
+                        caption: "IsletmeId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/IsletmeLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
                     },
                     {
                         dataField: "SubeId",
                         caption: "SubeId",
-                              lookup: {
-                            dataSource: TblGeneralSube,
-                            displayExpr: 'Adi',
-                            valueExpr: 'Id'
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/SubeLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
                     },
                     {
                         dataField: "DosyaId",
                         caption: "DosyaId",
-                              lookup: {
-                            dataSource: TblFileDosyaSsistemi,
-                            displayExpr: 'Ad',
-                            valueExpr: 'Id'
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblFileDosyaSsistemiLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
-
                     },
                     {
                         dataField: "UserId",
                         caption: "UserId",
-                              lookup: {
-                            dataSource: TblSsokullanici,
-                            displayExpr: 'Name',
-                            valueExpr: 'Id'
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblSsoKullaniciLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
-
                     },
                     {
                         dataField: "Yil",
@@ -142,19 +164,19 @@
                         height: 525,
                     },
                     form: {
-                        items: [
+                        items:   [
                             {
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                items: ['Name', 'NavigationId', 'Icon', 'MasterId', 'YeniSekmedeAc', 'DisUrl', 'Sira', 'ApplicationId'],
+                                items: ['IsletmeId', 'FirmaId', 'SubeId', 'DosyaId', 'UserId','Yil'],
                             },
                             {
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
                                 caption: 'TblGeneralApplication Base',
-                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi', 'SystemApp', 'ParametreAktif', 'DisariAcik'],
+                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
                             }],
                     },
                 }

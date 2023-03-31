@@ -1,9 +1,4 @@
-﻿@model TblCMSNavYetkiViewModel
-@using CrudProject.ViewModels
-
-
-
-<div class="row">
+﻿<div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
     </div>
@@ -15,11 +10,12 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            var model = @Html.Raw(JsonConvert.SerializeObject(Model.TblCmsnavYetkis));
-            var navigation = @Html.Raw(JsonConvert.SerializeObject(Model.TblCmsappNavigations));
-            GridData(model,navigation)
+            $.getJSON('/TblCMSNavYetki/Get', function (model) {
+                GridData(model)
+            })
         });
-        function GridData(models, navigation) {
+        function GridData(models) {
+            let url = "TblCMSNavYetki";
             $("#gridContainer").dxDataGrid({
                 dataSource: models,
 
@@ -27,41 +23,103 @@
                     {
                         dataField: "Id",
                     },
-                    {
+                      {
                         dataField: "IsletmeId",
-                        caption: "IsletmeId"
+                        caption: "IsletmeId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/IsletmeLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
                     },
-                    {
+                          {
                         dataField: "FirmaId",
                         caption: "FirmaId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/FirmaLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
                     },
-                    {
+                               {
                         dataField: "SubeId",
-                        caption: "SubeId"
+                        caption: "SubeId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/SubeLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
                     },
                     {
                         dataField: "KullaniciId",
                         caption: "KullaniciId",
-
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblSsoKullaniciLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
                     },
                     {
                         dataField: "KulGrupId",
                         caption: "KulGrupId",
-
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblGeneralKullaniciGrupTanimLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
                     },
                     {
                         dataField: "NavigationId",
                         caption: "NavigationId",
                         lookup: {
-                          dataSource: navigation,
-                          displayExpr: 'Name',
-                          valueExpr: 'Id',
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblGeneralNavigationLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
                     },
-                    {
+                        {
                         dataField: "Yil",
-                        caption: "Yil",
-
+                        caption: "Yil"
+                    },
+                    {
+                        dataField: "Onaylandi",
+                        caption: "Onaylandi"
                     },
                     {
                         dataField: "Aktif",
@@ -70,14 +128,6 @@
                     {
                         dataField: "Guid",
                         caption: "Guid"
-                    },
-                    {
-                        dataField: "Silindi",
-                        caption: "Silindi"
-                    },
-                    {
-                        dataField: "Onaylandi",
-                        caption: "Onaylandi"
                     },
                     {
                         dataField: "DegistirenId",
@@ -98,6 +148,10 @@
                     {
                         dataField: "Revizyon",
                         caption: "Revizyon"
+                    },
+                    {
+                        dataField: "Silindi",
+                        caption: "Silindi"
                     }
                 ],
                 paging: {
@@ -118,7 +172,7 @@
                     allowAdding: true,
                     allowDeleting: true,
                     popup: {
-                        title: 'TblCmsAppMenu Info',
+                        title: 'TblCMSNavYetki Info',
                         showTitle: true,
                         width: 700,
                         height: 525,
@@ -129,27 +183,27 @@
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                items: ['Name', 'NavigationId', 'Icon', 'MasterId', 'YeniSekmedeAc', 'DisUrl', 'Sira', 'ApplicationId'],
+                                items: ['IsletmeId', 'FirmaId', 'SubeId', 'Yil', 'KullaniciId', 'KulGrupId', 'NavigationId'],
                             },
                             {
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                caption: 'TblGeneralApplication Base',
-                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi', 'SystemApp', 'ParametreAktif', 'DisariAcik'],
+                                caption: 'TblCMSNavYetki Base',
+                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
                             }],
                     },
                 }
             });
         }
         function rowUpdate(Data) {
-            AjaxMethod('@Url.Action("Put", "TblCmsnavYetki")', Data);
+            AjaxMethod('@Url.Action("Put", "TblCMSNavYetki")', Data);
         }
         function rowInsert(Data) {
-            AjaxMethod('@Url.Action("Post", "TblCmsnavYetki")', Data);
+            AjaxMethod('@Url.Action("Post", "TblCMSNavYetki")', Data);
         }
         function rowRemove(Data) {
-            DeleteCall('@Url.Action("Delete", "TblCmsnavYetki")', Data);
+            DeleteCall('@Url.Action("Delete", "TblCMSNavYetki")', Data);
         }
         function AjaxMethod(url, Data) {
             $.ajax({

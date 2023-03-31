@@ -1,8 +1,4 @@
-﻿@using CrudProject.ViewModels
-@model TblGeneralBelgeDurumlariViewModel
-
-
-
+﻿
 <div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
@@ -15,11 +11,12 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            var model = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralBelgeDurumlari));
-            var islemtipi = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralIslemTipi));
-            GridData(model, islemtipi);
+            $.getJSON('/TblGeneralBelgeDurumlari/Get', function (model) {
+                GridData(model)
+            })
         });
-        function GridData(models, islemtipi) {
+        function GridData(models) {
+            let url = "TblGeneralBelgeDurumlari";
             $("#gridContainer").dxDataGrid({
                 dataSource: models,
                 columns: [
@@ -37,12 +34,18 @@
                     {
                         dataField: "IslemTip",
                         caption: "IslemTip",
-                        lookup: {
-                            dataSource: islemtipi,
-                            displayExpr: 'IslemTipi',
-                            valueExpr: 'IslemTipiId',
-                        }
-                    }
+                            lookup: {
+                                dataSource: DevExpress.data.AspNet.createStore({
+                                    key: 'Value',
+                                loadUrl: `/${url}/TblGeneralIslemTipiLookup`,
+                                    onBeforeSend(method, ajaxOptions) {
+                                        ajaxOptions.xhrFields = { withCredentials: true };
+                                    },
+                                }),
+                                valueExpr: 'Value',
+                                displayExpr: 'Text',
+                            }
+                        },
                 ],
                 paging: {
                     pageSize: 6
@@ -62,7 +65,7 @@
                     allowAdding: true,
                     allowDeleting: true,
                     popup: {
-                        title: 'TblCmsAppMenu Info',
+                        title: 'TblGeneralBelgeDurumlari Info',
                         showTitle: true,
                         width: 700,
                         height: 525,

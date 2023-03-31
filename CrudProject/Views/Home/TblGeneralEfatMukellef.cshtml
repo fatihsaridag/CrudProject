@@ -1,7 +1,4 @@
-﻿@model IEnumerable<TblGeneralEfatMukellef>
-
-
-
+﻿ 
 <div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
@@ -14,10 +11,12 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            var model = @Html.Raw(JsonConvert.SerializeObject(Model));
-            GridData(model);
+            $.getJSON('/TblGeneralEfatMukellef/Get', function (model) {
+                GridData(model)
+            })
         });
         function GridData(models) {
+            let url = "TblGeneralEfatMukellef";
             $("#gridContainer").dxDataGrid({
                 dataSource: models,
                 columns: [
@@ -100,7 +99,7 @@
                     allowAdding: true,
                     allowDeleting: true,
                     popup: {
-                        title: 'TblGeneralDil Info',
+                        title: 'TblGeneralEfatMukellef Info',
                         showTitle: true,
                         width: 700,
                         height: 525,
@@ -117,7 +116,7 @@
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                caption: 'TblGeneralApplication Base',
+                                caption: 'TblGeneralEfatMukellef Base',
                                 items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
                             }
                         ],

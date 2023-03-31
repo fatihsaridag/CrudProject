@@ -1,7 +1,4 @@
-﻿@using CrudProject.ViewModels;
-@model TblGeneralFirmaViewModel
-
-
+﻿
 
 <div class="row">
     <div class="col-md-8"></div>
@@ -15,15 +12,12 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            var model = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralFirma));
-            var isletme = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralIsletme));
-            var il = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralIl));
-            var koy = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralKoy));
-            var ilce = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralIlce));
-            var ulke = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralUlke));
-            GridData(model,isletme,il,koy,ilce,ulke)
+            $.getJSON('/TblGeneralFirma/Get', function (model) {
+                GridData(model)
+            })
         });
-        function GridData(models, isletme, il, koy, ilce,ulke) {
+        function GridData(models) {
+            let url = "TblGeneralFirma";
             $("#gridContainer").dxDataGrid({
                 dataSource: models,
                 columns: [
@@ -34,13 +28,19 @@
                         dataField: "Adi",
                         caption: "Adi"
                     },
-                     {
+                    {
                         dataField: "IsletmeId",
                         caption: "IsletmeId",
-                          lookup: {
-                            dataSource: isletme,
-                            displayExpr: 'Adi',
-                            valueExpr: 'Id',
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/IsletmeLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
                     },
                     {
@@ -82,37 +82,61 @@
                     {
                         dataField: "UlkeId",
                         caption: "UlkeId",
-                         lookup: {
-                            dataSource: ulke,
-                            displayExpr: 'Adi',
-                            valueExpr: 'Id',
-                        }
-                    },
-                    {
-                        dataField: "IlId",
-                        caption: "IlId",
-                         lookup: {
-                            dataSource: il,
-                            displayExpr: 'Adi',
-                            valueExpr: 'Id',
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblGeneralUlkesLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
                     },
                     {
                         dataField: "IlceId",
                         caption: "IlceId",
                         lookup: {
-                            dataSource: ilce,
-                            displayExpr: 'Adi',
-                            valueExpr: 'Id',
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblGeneralIlcesLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
+                    },
+                    {
+                        dataField: "IlId",
+                        caption: "IlId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblGeneralIlsLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
                     },
                     {
                         dataField: "MahKoyId",
                         caption: "MahKoyId",
-                         lookup: {
-                            dataSource: koy,
-                            displayExpr: 'Adi',
-                            valueExpr: 'Id',
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblGeneralKoysLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
                     },
                     {
@@ -207,7 +231,7 @@
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                caption: 'TblGeneralApplication Base',
+                                caption: 'TblGeneralFirma Base',
                                 items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
                             }
                         ],

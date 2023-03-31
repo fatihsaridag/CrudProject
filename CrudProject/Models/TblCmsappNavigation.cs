@@ -20,9 +20,5 @@ namespace CrudProject.Models
         public long ApplicationId { get; set; }
         public string SubUrl { get; set; } = null!;
 
-
-        public ICollection<TblGeneralFavoriler> Favorilers { get; set;}
-
-
     }
 }

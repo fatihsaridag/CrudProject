@@ -1,7 +1,4 @@
-﻿@model IEnumerable<TblGeneralBnkHarDurum>
-
-
-
+﻿
 <div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
@@ -12,13 +9,15 @@
 
 @section Scripts{
 
-        <script type="text/javascript">
-            $(document).ready(function () {
-                var model = @Html.Raw(JsonConvert.SerializeObject(Model));
-                GridData(model);
-            });
-            function GridData(models) {
-                $("#gridContainer").dxDataGrid({
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.getJSON('/TblGeneralBnkHarDurum/Get', function (model) {
+                GridData(model)
+            })
+        });
+        function GridData(models) {
+            let url = "TblGeneralBnkHarDurum";
+            $("#gridContainer").dxDataGrid({
                     dataSource: models,
                     columns: [
                         {
@@ -47,7 +46,7 @@
                         allowAdding: true,
                         allowDeleting: true,
                         popup: {
-                            title: 'TblGeneralBnkEftDurum Info',
+                        title: 'TblGeneralBnkHarDurum Info',
                             showTitle: true,
                             width: 700,
                             height: 525,

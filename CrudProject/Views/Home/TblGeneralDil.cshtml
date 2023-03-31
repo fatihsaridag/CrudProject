@@ -1,8 +1,4 @@
-﻿@model IEnumerable<TblGeneralDil>
-
-
-
-<div class="row">
+﻿<div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
     </div>
@@ -14,10 +10,12 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            var model = @Html.Raw(JsonConvert.SerializeObject(Model));
-            GridData(model);
+            $.getJSON('/TblGeneralDil/Get', function (model) {
+                GridData(model)
+            })
         });
         function GridData(models) {
+            let url = "TblGeneralDil";
             $("#gridContainer").dxDataGrid({
                 dataSource: models,
                 columns: [
@@ -106,13 +104,13 @@
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                items: ['Kod', 'KisaKod', 'Adi', 'Lang', 'BankaHareket', 'BankaHareket']
+                                items: ['Kod', 'KisaKod', 'Adi', 'Lang']
                             },
                             {
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                caption: 'TblGeneralApplication Base',
+                                caption: 'TblGeneralDil Base',
                                 items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
                             }
                         ],

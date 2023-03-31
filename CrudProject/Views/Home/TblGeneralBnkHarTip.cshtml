@@ -1,8 +1,4 @@
-﻿@model IEnumerable<TblGeneralBnkHarTip>
-
-
-
-<div class="row">
+﻿<div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
     </div>
@@ -14,10 +10,12 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            var model = @Html.Raw(JsonConvert.SerializeObject(Model));
-            GridData(model);
+            $.getJSON('/TblGeneralBnkHarTip/Get', function (model) {
+                GridData(model)
+            })
         });
         function GridData(models) {
+            let url = "TblGeneralBnkHarTip";
             $("#gridContainer").dxDataGrid({
                 dataSource: models,
                 columns: [

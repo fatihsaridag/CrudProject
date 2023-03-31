@@ -1,8 +1,4 @@
-﻿@using CrudProject.ViewModels
-@model TblCmsAppMenuViewModel
-
-
-
+﻿
 <div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
@@ -15,11 +11,12 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            var model = @Html.Raw(JsonConvert.SerializeObject(Model.TblCmsappMenues));
-            var navigation = @Html.Raw(JsonConvert.SerializeObject(Model.TblCmsappNavigations));
-            GridData(model, navigation);
+            $.getJSON('/TblCmsappMenus/Get', function (model) {
+                GridData(model)
+            })
         });
-        function GridData(models,navigation) {
+        function GridData(models) {
+            let url = "TblCmsappMenus";
             $("#gridContainer").dxDataGrid({
                 dataSource: models,
                 columns: [
@@ -34,9 +31,15 @@
                         dataField: "NavigationId",
                         caption: "NavigationId",
                         lookup: {
-                          dataSource: navigation,
-                          displayExpr: 'Name',
-                          valueExpr: 'Id',
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblGeneralNavigationLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
                     },
                     {
@@ -47,9 +50,15 @@
                         dataField: "MasterId",
                         caption: "MasterId",
                         lookup: {
-                            dataSource: models,
-                            displayExpr: 'Name',
-                            valueExpr: 'Id',
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TbLCmsAppMenuLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
                     },
                     {
@@ -60,27 +69,38 @@
                         dataField: "DisUrl",
                         caption: "DisUrl"
                     },
-                       {
+                    {
                         dataField: "Sira",
                         caption: "Sira"
                     },
-                     {
+                    {
                         dataField: "ApplicationId",
-                        caption: "ApplicationId"
+                        caption: "ApplicationId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/GeneralApplicationLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
                     },
-                     {
+                    {
                         dataField: "Onaylandi",
                         caption: "Onaylandi"
                     },
-                     {
+                    {
                         dataField: "Aktif",
                         caption: "Aktif"
                     },
-                     {
+                    {
                         dataField: "Guid",
                         caption: "Guid"
                     },
-                     {
+                    {
                         dataField: "DegistirenId",
                         caption: "DegistirenId"
                     },
@@ -123,7 +143,7 @@
                     allowAdding: true,
                     allowDeleting: true,
                     popup: {
-                        title: 'TblCmsAppMenu Info',
+                        title: 'TblCmsappMenus Info',
                         showTitle: true,
                         width: 700,
                         height: 525,
@@ -134,14 +154,14 @@
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                items: ['Name', 'NavigationId', 'Icon', 'MasterId', 'YeniSekmedeAc', 'DisUrl', 'Sira', 'ApplicationId'],
+                                items: ['IsletmeId', 'FirmaId', 'SubeId', 'DosyaId', 'UserId', 'Yil'],
                             },
                             {
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                caption: 'TblGeneralApplication Base',
-                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi', 'SystemApp', 'ParametreAktif', 'DisariAcik'],
+                                caption: 'TblCmsappMenus Base',
+                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
                             }],
                     },
                 }
@@ -189,3 +209,12 @@
         }
     </script>
 }
+
+
+
+
+
+
+
+
+

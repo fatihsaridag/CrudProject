@@ -1,76 +1,320 @@
-﻿using CrudProject.GenericRepository;
-using CrudProject.GenericRepository.Abstract;
-using CrudProject.Models;
-using CrudProject.RepositoryManager.Abstract;
-using CrudProject.ViewModels;
+﻿using CrudProject.Models;
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace CrudProject.Controllers
 {
     public class HomeController : Controller
     {
 
-        private readonly IRepositoryManager _repositoryManager;
+        private readonly OctaPullContext _octaPullContext;
 
-        public HomeController(IRepositoryManager repositoryManager)
+        public HomeController(OctaPullContext octaPullContext)
         {
-            _repositoryManager= repositoryManager;
+            _octaPullContext = octaPullContext;
         }
-        
 
-        public IActionResult TblGeneralFirma()
+        public IActionResult TblGeneralKulGrupEkran()
         {
-            var tblGeneralFirma = _repositoryManager.TblGeneralFirma.GetAll();
-            var tblGeneralIsletme = _repositoryManager.TblGeneralIsletme.GetAll();
-            var tblGeneralUlke = _repositoryManager.tblGeneralUlkeRepository.GetAll();
-            var tblGeneralIl = _repositoryManager.TblGeneralIl.GetAll();
-            var tblGeneralIlce = _repositoryManager.TblGeneralIlce.GetAll();
-            var tblGeneralKoy = _repositoryManager.tblGeneralKoyRepository.GetAll();
-
-
-            TblGeneralFirmaViewModel tblGeneralFirmaViewModel = new TblGeneralFirmaViewModel
-            {
-                TblGeneralFirma = tblGeneralFirma,
-                TblGeneralIsletme = tblGeneralIsletme,
-                TblGeneralIl= tblGeneralIl,
-                TblGeneralIlce= tblGeneralIlce,
-                TblGeneralKoy = tblGeneralKoy,
-                TblGeneralUlke= tblGeneralUlke,
-            };
-
-            return View(tblGeneralFirmaViewModel);
+            return View();
         }
+
 
         public IActionResult TblGeneralFavoriler()
         {
-
-            var tblGeneralFavoriler = _repositoryManager.tblGeneralFavorilerRepository.GetAll();
-            var tblGeneralIsletme = _repositoryManager.TblGeneralIsletme.GetAll();
-            var tblGeneralSube = _repositoryManager.TblGeneralSube.GetAll();
-            var tblGeneralSubeKullanici = _repositoryManager.tblGeneralSubeKullaniciRepository.GetAll();
-
-            TblGeneralFavorilerViewModel tblGeneralFavorilerViewModel = new TblGeneralFavorilerViewModel
-            {
-                TblGeneralFavorilers= tblGeneralFavoriler,
-                TblGeneralIsletmes= tblGeneralIsletme,
-                TblGeneralSubes = tblGeneralSube,
-                TblGeneralSubeKullanici =tblGeneralSubeKullanici
-            };
-
-            return View(tblGeneralFavorilerViewModel);
+            return View();
         }
+
+
+        public IActionResult TblSsoyonlendirme()
+        {
+            return View();
+        }
+
+        public IActionResult TblSsotoken()
+        {
+            return View();
+        }
+
+        public IActionResult TblSsokullaniciTipi()
+        {
+            return View();
+        }
+
+        public IActionResult TblSsokullanici()
+        {
+            return View();
+        }
+
+        public IActionResult TblSsoizin()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblSsohost()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblSsodavetDetay()
+        {
+            return View();
+        }
+
+        public IActionResult TblSsodavet()
+        {
+            return View();
+        }
+
+        public IActionResult TblSocialLink()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblSocialFeedTip()
+        {
+            return View();
+        }
+
+        public IActionResult TblSocialFeedLink()
+        {
+            return View();
+        }
+
+        public IActionResult TblSocialFeedKisi()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblSocialFeed()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblOption()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralVisitDurum()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblGeneralVergiDairesi()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralUserApplication()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralUlke()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblGeneralSubeKullanici()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblGeneralSube()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblGeneralRehberView()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralRehberColumn()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralRehber()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralRedYeri()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralRedNedenYetki()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralRedNedenYeri()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralRedNedeni()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralRedDurumYetki()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralRedDurum()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblGeneralParaBirimi()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblGeneralOnayDurum()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralModul()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralLidosTalepTip()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralLidosElusTip()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralLidosDurum()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblGeneralKullaniciGrupTanim()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralKullaniciEkAlan()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblGeneralKoy()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblGeneralIsletmeApplication()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblGeneralIsletme()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralIslemTipi()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralIslemSeriTanimlama()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblGeneralIslemSeri()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralIslemKilit()
+        {
+          
+            return View();
+        }
+
+        public IActionResult TblGeneralIslemBelgeTip()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralIntegration()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblGeneralIlce()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralIl()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralGun()
+        {
+            return View();
+        }
+
+
+
+        public IActionResult TblGeneralGrupKullanici()
+        {
+            return View();
+        }
+
+        public IActionResult TblGeneralGondSekli()
+        {
+            return View();
+        }
+
+
+        public IActionResult TblGeneralFirma()
+        {
+           
+
+            return View();
+        }
+
+     
 
 
         public IActionResult TblGeneralEfatMukellefMail()
         {
-            var tblGeneralEfatMukellefMail = _repositoryManager.tblGeneralEFatMukellefMailRepository.GetAll();
-            var tblGeneralEfatMukellef = _repositoryManager.tblGeneralEFatMukellefRepository.GetAll();
-            TblGeneralEfatMukellefMailViewModel tblGeneralEfatMukellefMailViewModel = new();
-            tblGeneralEfatMukellefMailViewModel.TblGeneralEfatMukellef = tblGeneralEfatMukellef;
-            tblGeneralEfatMukellefMailViewModel.TblGeneralEfatMukellefMail = tblGeneralEfatMukellefMail;
-
-            return View(tblGeneralEfatMukellefMailViewModel);
+          
+            return View();
         }
 
 
@@ -86,26 +330,18 @@ namespace CrudProject.Controllers
 
         public IActionResult TblGeneralApplications()
         {
-            var datas = _repositoryManager.TblGeneralApplication.GetAll();
-            return View(datas);
+            return View();
         }
 
         public IActionResult TblGeneralBanka()
         {
-            var datas = _repositoryManager.TblGeneralBankaRepository.GetAll();
-            return View(datas);
+            return View();
         }
 
         public IActionResult TblCMSAppMenu()
         {
-            var tblCmsAppMenuViewModel = new TblCmsAppMenuViewModel();
-            var datas = _repositoryManager.TblCMSAppMenus.GetAll();
-            var navigation = _repositoryManager.TblCmsAppNavigationRepository.GetAll();
 
-            tblCmsAppMenuViewModel.TblCmsappMenues = datas;
-            tblCmsAppMenuViewModel.TblCmsappNavigations = navigation;
-
-            return View(tblCmsAppMenuViewModel);
+            return View();
         }
 
 
@@ -117,119 +353,69 @@ namespace CrudProject.Controllers
 
         public IActionResult TblCmsnavYetki()
         {
-            var TblCMSNavYetkiViewModel = new TblCMSNavYetkiViewModel();
-            var  tblCmsNavYetkis =  _repositoryManager.TblCMSNavYetki.GetAll();
-            var  navigations =  _repositoryManager.TblCmsAppNavigationRepository.GetAll();
-
-            TblCMSNavYetkiViewModel.TblCmsnavYetkis = tblCmsNavYetkis;
-            TblCMSNavYetkiViewModel.TblCmsappNavigations = navigations;
-            return View(TblCMSNavYetkiViewModel);
+            return View();
 
         }
 
         public IActionResult TblFileFavoriDosyalar()
         {
-            var TblFileFavoriDosyalarViewModel = new TblFileFavoriDosyalarViewModel();
-
-            var TblFavoriFile = _repositoryManager.TblFileFavoriDosyalar.GetAll();
-
-            var TblFileDosyaSistemi = _repositoryManager.TblFileDosyaSistemi.GetAll();
-            var TblGeneralFirma = _repositoryManager.TblGeneralFirma.GetAll();
-            var TblGeneralSube = _repositoryManager.TblGeneralSube.GetAll();
-            var TblSsokullanici = _repositoryManager.TblSSOKullanici.GetAll();
-            var TblGeneralIsletme = _repositoryManager.TblGeneralIsletme.GetAll();
-
-            TblFileFavoriDosyalarViewModel.TblFileFavoriDosyalar = TblFavoriFile;
-            TblFileFavoriDosyalarViewModel.TblFileDosyaSsistemi = TblFileDosyaSistemi;
-            TblFileFavoriDosyalarViewModel.TblGeneralFirma = TblGeneralFirma;
-            TblFileFavoriDosyalarViewModel.TblGeneralSube = TblGeneralSube;
-            TblFileFavoriDosyalarViewModel.TblSsokullanici = TblSsokullanici;
-            TblFileFavoriDosyalarViewModel.TblGeneralIsletme = TblGeneralIsletme;
-
-            return View(TblFileFavoriDosyalarViewModel);
+            return View();
         }
 
 
         public IActionResult TblGeneralBankaSube()
         {
-            TblGeneralBankaSubeViewModel tblGeneralBankaSubeViewModel = new();
-            var tblGeneralBankaSube = _repositoryManager.TblGeneralBankaSube.GetAll();
-            var tblGeneralIl = _repositoryManager.TblGeneralIl.GetAll();
-            var tblGeneralIlce = _repositoryManager.TblGeneralIlce.GetAll();
-            var tblGeneralBanka = _repositoryManager.TblGeneralBankaRepository.GetAll();
-
-            tblGeneralBankaSubeViewModel.TblGeneralIls = tblGeneralIl;
-            tblGeneralBankaSubeViewModel.TblGeneralIlces = tblGeneralIlce;
-            tblGeneralBankaSubeViewModel.TblGeneralIlces = tblGeneralIlce;
-            tblGeneralBankaSubeViewModel.TblGeneralBankas = tblGeneralBanka;
-
-            return View(tblGeneralBankaSubeViewModel);
+            return View();
         }
 
         public IActionResult TblGeneralBelgeDurumlari()
         {
-            TblGeneralBelgeDurumlariViewModel tblGeneralBelgeDurumlariViewModel = new();
 
-            var tblGeneralBelgeDurumlari = _repositoryManager.TblGeneralBelgeDurumlari.GetAll();
-           var tblGeneralIslemTipi = _repositoryManager.TblGeneralIslemTipiRepository.GetAll();
-
-
-            tblGeneralBelgeDurumlariViewModel.TblGeneralBelgeDurumlari = tblGeneralBelgeDurumlari;
-            tblGeneralBelgeDurumlariViewModel.TblGeneralIslemTipi = tblGeneralIslemTipi;
-
-            return View(tblGeneralBelgeDurumlariViewModel);
+            return View();
         }
 
 
         public IActionResult TblGeneralBnkBelgeDurum()
         {
-            var tblGeneralBnkBelgeDurum = _repositoryManager.TblGeneralBnkBelgeDurumRepository.GetAll();
 
-            return View(tblGeneralBnkBelgeDurum);
+            return View();
         }
 
         public IActionResult TblGeneralBnkEftDurum()
         {
-            var tblGeneralBnkEftDurum = _repositoryManager.TblGeneralBnkEftDurumRepository.GetAll();
-            return View(tblGeneralBnkEftDurum);
+            return View();
         }
 
         public IActionResult TblGeneralBnkHarDurum()
         {
-            var tblGeneralBnkHarDurum = _repositoryManager.TblGeneralBnkHarDurum.GetAll();
             
-            return View(tblGeneralBnkHarDurum);
+            return View();
         }
 
         public IActionResult TblGeneralBnkHarKynk()
         {
-            var tblGeneralBnkHarKaynak = _repositoryManager.TblGeneralBnkHarKynkRepository.GetAll();
-            return View(tblGeneralBnkHarKaynak);
+            return View();
         }
 
         public IActionResult TblGeneralBnkHarTip()
         {
-            var tblGeneralBnkHarTip = _repositoryManager.TblGeneralBnkHarTipRepository.GetAll();
-            return View(tblGeneralBnkHarTip);
+            return View();
         }
 
         public IActionResult TblGeneralDil()
         {
-            var TblGeneralDils = _repositoryManager.TblGeneralDilRepository.GetAll();
-            return View(TblGeneralDils);
+            return View();
         }
 
         public IActionResult TblGeneralEevrakDurumlari()
         {
-            var tblGeneralEvrakDurumlari = _repositoryManager.TblGeneralEEvrakDurumlariRepository.GetAll();
 
-            return View(tblGeneralEvrakDurumlari);
+            return View();
         }
 
         public IActionResult TblGeneralEfatMukellef()
         {
-            var tblGeneralEfatMukellef = _repositoryManager.tblGeneralEFatMukellefRepository.GetAll();
-            return View(tblGeneralEfatMukellef);
+            return View();
         }
 
 

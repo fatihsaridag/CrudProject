@@ -22,6 +22,7 @@ namespace CrudProject.Models
         public long KisiId { get; set; }
         public long NavigationId { get; set; }
 
+        public virtual TblCmsappNavigation TblCmsappNavigation { get; set; } = null!;
         public virtual TblGeneralIsletme Isletme { get; set; } = null!;
         public virtual TblSsokullanici Kisi { get; set; } = null!;
         public virtual TblGeneralFirma TblGeneralFirma { get; set; } = null!;

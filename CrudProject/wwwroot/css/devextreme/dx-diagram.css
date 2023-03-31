@@ -30,7 +30,6 @@
   user-select: none; }
 
 .dxdi-canvas text {
-  font-family: Arial;
   font-size: 10pt; }
 
 .dxdi-canvas .page {
@@ -55,8 +54,7 @@
   stroke: rgba(0, 0, 0, 0.05); }
 
 .dxdi-canvas .shape,
-.dxdi-canvas .toolbox-item {
-  pointer-events: bounding-box; }
+
 
 .dxdi-canvas .shape rect, .dxdi-canvas .shape path, .dxdi-canvas .shape line, .dxdi-canvas .shape ellipse,
 .dxdi-canvas .toolbox-item rect,
@@ -406,7 +404,6 @@
 .dxdi-toolbox .dxdi-canvas .toolbox-item text,
 .dxdi-toolbox-drag-item .dxdi-canvas text {
   font-weight: bold;
-  font-family: "Segoe UI","Helvetica Neue",Helvetica,Arial,"san-serif";
   fill: currentColor; }
 
 .dxdi-toolbox-drag-item .dxdi-canvas .dxdi-image-placeholder {
@@ -424,7 +421,6 @@
 
 .dxdi-toolbox-drag-item,
 .dxdi-toolbox-drag-text-item {
-  font-family: Arial;
   font-size: 10pt;
   color: black;
   position: absolute;
@@ -477,7 +473,6 @@
   padding: 0;
   outline: none;
   background-color: transparent;
-  font-family: Arial;
   font-size: 10pt;
   color: black;
   line-height: 1.1em;
@@ -496,7 +491,6 @@
   margin-left: calc(-4em - 3px);
   background-color: white;
   border: 1px solid dodgerblue;
-  font-family: Arial;
   font-size: 10pt;
   color: black;
   line-height: 1.1em;

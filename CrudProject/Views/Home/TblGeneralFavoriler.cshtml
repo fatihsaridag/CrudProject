@@ -1,9 +1,4 @@
-﻿@using CrudProject.ViewModels;
-@model TblGeneralFavorilerViewModel
-
-
-
-<div class="row">
+﻿<div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
     </div>
@@ -15,14 +10,12 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            var model = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralFavorilers));
-            var firma = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralFirmas));
-            var sube = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralSubes));
-            var isletme = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralIsletmes));
-            var subeKullanici = @Html.Raw(JsonConvert.SerializeObject(Model.TblGeneralSubeKullanici));
-            GridData(model, firma, sube, isletme, subeKullanici)
+            $.getJSON('/TblGeneralFavoriler/Get', function (model) {
+                GridData(model)
+            })
         });
-        function GridData(model, firma, sube, subeKullanici) {
+        function GridData(models) {
+            let url = "TblGeneralFavoriler";
             $("#gridContainer").dxDataGrid({
                 dataSource: models,
                 columns: [
@@ -30,93 +23,119 @@
                         dataField: "Id",
                     },
                     {
+                        dataField: "Yil",
+                        caption: "Yil"
+                    },
+                    {
                         dataField: "IsletmeId",
                         caption: "IsletmeId",
                         lookup: {
-                            dataSource: isletme,
-                            displayExpr: 'Adi',
-                            valueExpr: 'Id',
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/IsletmeLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
                     },
                     {
                         dataField: "FirmaId",
                         caption: "FirmaId",
                         lookup: {
-                            dataSource: firma,
-                            displayExpr: 'Adi',
-                            valueExpr: 'Id',
-                        }
-                    },
-                    {
-                        dataField: "KisiId",
-                        caption: "KisiId",
-                        lookup: {
-                            dataSource: firma,
-                            displayExpr: 'UserName',
-                            valueExpr: 'Id',
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/FirmaLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
                     },
                     {
                         dataField: "SubeId",
                         caption: "SubeId",
                         lookup: {
-                            dataSource: sube,
-                            displayExpr: 'Adi',
-                            valueExpr: 'Id',
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/SubeLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
                     },
                     {
-                        dataField: "SubeKullaniciId",
-                        caption: "SubeKullaniciId",
+                        dataField: "KisiId",
+                        caption: "KisiId",
                         lookup: {
-                            dataSource: subeKullanici,
-                            displayExpr: 'Name',
-                            valueExpr: 'Id',
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblSsokullaniciTipiLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
                         }
                     },
                     {
-                        dataField: "EpostaAdres",
-                        caption: "EpostaAdres"
-                    },
-                    {
-                        dataField: "Erpkodu",
-                        caption: "Erpkodu"
-                    },
-                    {
-                        dataField: "Aktif",
-                        caption: "Aktif"
+                        dataField: "NavigationId",
+                        caption: "NavigationId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblGeneralNavigationLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
                     },
                     {
                         dataField: "Onaylandi",
                         caption: "Onaylandi"
                     },
                     {
-                        dataField: "Silindi",
-                        caption: "Silindi"
+                        dataField: "Aktif",
+                        caption: "Aktif"
                     },
                     {
-                        dataField: "Revizyon",
-                        caption: "Revizyon"
-                    },
-                    {
-                        dataField: "OlusturmaTarih",
-                        caption: "OlusturmaTarih"
-                    },
-                    {
-                        dataField: "DegisiklikTarih",
-                        caption: "DegisiklikTarih"
-                    },
-                    {
-                        dataField: "OlusturanId",
-                        caption: "OlusturanId"
+                        dataField: "Guid",
+                        caption: "Guid"
                     },
                     {
                         dataField: "DegistirenId",
                         caption: "DegistirenId"
                     },
                     {
-                        dataField: "Guid",
-                        caption: "Guid"
+                        dataField: "OlusturanId",
+                        caption: "OlusturanId"
+                    },
+                    {
+                        dataField: "DegisiklikTarih",
+                        caption: "DegisiklikTarih"
+                    },
+                    {
+                        dataField: "OlusturmaTarih",
+                        caption: "OlusturmaTarih"
+                    },
+                    {
+                        dataField: "Revizyon",
+                        caption: "Revizyon"
+                    },
+                    {
+                        dataField: "Silindi",
+                        caption: "Silindi"
                     }
                 ],
                 paging: {
@@ -137,7 +156,7 @@
                     allowAdding: true,
                     allowDeleting: true,
                     popup: {
-                        title: 'TblGeneralEfatMukellefMail Info',
+                        title: 'TblGeneralFavoriler Info',
                         showTitle: true,
                         width: 700,
                         height: 525,
@@ -148,13 +167,13 @@
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                items: ['MukellefId', 'EpostaAdres', 'Erpkodu']
+                                items: ['IsletmeId', 'FirmaId', 'SubeId', 'KisiId', 'NavigationId', 'Yil']
                             },
                             {
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                caption: 'TblGeneralApplication Base',
+                                caption: 'TblGeneralFavoriler Base',
                                 items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
                             }
                         ],
@@ -163,13 +182,13 @@
             });
         }
         function rowUpdate(Data) {
-            AjaxMethod('@Url.Action("Put", "TblGeneralEfatMukellefMail")', Data);
+            AjaxMethod('@Url.Action("Put", "TblGeneralFavoriler")', Data);
         }
         function rowInsert(Data) {
-            AjaxMethod('@Url.Action("Post", "TblGeneralEfatMukellefMail")', Data);
+            AjaxMethod('@Url.Action("Post", "TblGeneralFavoriler")', Data);
         }
         function rowRemove(Data) {
-            DeleteCall('@Url.Action("Delete", "TblGeneralEfatMukellefMail")', Data);
+            DeleteCall('@Url.Action("Delete", "TblGeneralFavoriler")', Data);
         }
         function AjaxMethod(url, Data) {
             $.ajax({

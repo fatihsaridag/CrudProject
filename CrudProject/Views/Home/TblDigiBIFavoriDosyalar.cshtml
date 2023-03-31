@@ -1,9 +1,4 @@
-﻿
-
-<nav aria-label="breadcrumb">
-    <h3 class="text  text-center text-primary">TblCmsVersion Table</h3>
-</nav>
-<div class="row">
+﻿<div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
     </div>
@@ -15,52 +10,100 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            GridData();
+            $.getJSON('/TblDigiBIFavoriDosyalar/Get', function (model) {
+                GridData(model)
+            })
         });
-        function GridData() {
+        function GridData(models) {
             let url = "TblDigiBIFavoriDosyalar";
             $("#gridContainer").dxDataGrid({
-                dataSource: DevExpress.data.AspNet.createStore({
-                    key: 'Id',
-                    loadUrl: `/${url}/Get`,
-                    insertUrl: `/${url}/Post`,
-                    updateUrl: `/${url}/Put`,
-                    deleteUrl: `/${url}/Delete`,
-                    onBeforeSend(method, ajaxOptions) {
-                        ajaxOptions.xhrFields = { withCredentials: true };
-                    },
-                }),
-                remoteOperations: true,
+                dataSource: models,
                 columns: [
                     {
                         dataField: "Id",
                     },
                     {
-                        dataField: "IsletmeId",
-                        caption: "IsletmeId"
+                        dataField: "Yil",
+                        caption: "Yil"
+                    },
+                      {
+                        dataField: "DosyaId",
+                        caption: "DosyaId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblDigiBIDosyaSistemiLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
+                    },
+                      {
+                        dataField: "UserId",
+                        caption: "UserId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblSsoKullaniciLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
                     },
                     {
                         dataField: "FirmaId",
                         caption: "FirmaId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/FirmaLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
+                    },
+                    {
+                        dataField: "IsletmeId",
+                        caption: "IsletmeId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/IsletmeLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
                     },
                     {
                         dataField: "SubeId",
-                        caption: "SubeId"
+                        caption: "SubeId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/SubeLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
                     },
                     {
-                        dataField: "Yil",
-                        caption: "Yil",
-
-                    },
-                        {
-                        dataField: "DosyaId",
-                        caption: "DosyaId",
-
-                    },
-                        {
-                        dataField: "UserId",
-                        caption: "UserId",
-
+                        dataField: "Onaylandi",
+                        caption: "Onaylandi"
                     },
                     {
                         dataField: "Aktif",
@@ -69,14 +112,6 @@
                     {
                         dataField: "Guid",
                         caption: "Guid"
-                    },
-                    {
-                        dataField: "Silindi",
-                        caption: "Silindi"
-                    },
-                    {
-                        dataField: "Onaylandi",
-                        caption: "Onaylandi"
                     },
                     {
                         dataField: "DegistirenId",
@@ -97,15 +132,32 @@
                     {
                         dataField: "Revizyon",
                         caption: "Revizyon"
+                    },
+                    {
+                        dataField: "Silindi",
+                        caption: "Silindi"
                     }
+
                 ],
+                paging: {
+                    pageSize: 6
+                },
+                onRowInserted: function (e) {
+                    rowInsert(e.data);
+                },
+                onRowUpdated: function (e) {
+                    rowUpdate(e.data);
+                },
+                onRowRemoved: function (e) {
+                    rowRemove(e.data.Id);
+                },
                 editing: {
                     mode: 'popup',
                     allowUpdating: true,
                     allowAdding: true,
                     allowDeleting: true,
                     popup: {
-                        title: 'TblCmsNavYetki Info',
+                        title: 'TblDigiBIFavoriDosyalar Info',
                         showTitle: true,
                         width: 700,
                         height: 525,
@@ -116,25 +168,59 @@
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                items: ['Name', 'NavigationId', 'Icon', 'MasterId', 'ApplicationId', 'YeniSekmedeAc', 'DisUrl', 'Sira'],
+                                items: ['DosyaId', 'UserId', 'Yil', 'IsletmeId', 'FirmaId', 'SubeId']
                             },
                             {
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                caption: 'TblGeneralApplication Base',
+                                caption: 'TblDigiBIFavoriDosyalar Base',
                                 items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
-                            }],
+                            }
+                        ],
                     },
+                }
+            });
+        }
+        function rowUpdate(Data) {
+            AjaxMethod('@Url.Action("Put", "TblDigiBIFavoriDosyalar")', Data);
+        }
+        function rowInsert(Data) {
+            AjaxMethod('@Url.Action("Post", "TblDigiBIFavoriDosyalar")', Data);
+        }
+        function rowRemove(Data) {
+            DeleteCall('@Url.Action("Delete", "TblDigiBIFavoriDosyalar")', Data);
+        }
+        function AjaxMethod(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: Data,
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+
+        function DeleteCall(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: { id: Data },
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
                 }
             });
         }
     </script>
 }
-
-
-
-
-
-
-

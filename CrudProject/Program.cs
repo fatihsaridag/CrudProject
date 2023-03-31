@@ -1,7 +1,5 @@
 using CrudProject.GenericRepository;
 using CrudProject.Models;
-using CrudProject.RepositoryManager.Abstract;
-using CrudProject.RepositoryManager.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
@@ -22,7 +20,6 @@ namespace CrudProject
                 opts.UseSqlServer(_configuration.GetConnectionString("SqlServer"));
             });
 
-            builder.Services.AddScoped<IRepositoryManager, EfRepositoryManager>();
             builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(EfGenericRepository<>));
             builder.Services.AddRazorPages().AddJsonOptions(options => 
             

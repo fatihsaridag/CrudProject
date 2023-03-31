@@ -25,7 +25,7 @@ namespace CrudProject.GenericRepository
 
         public IEnumerable<TEntity> GetAll()
         {
-            return _context.Set<TEntity>().ToList();
+            return   _context.Set<TEntity>().ToList();
         }
 
         public TEntity GetById(long id)

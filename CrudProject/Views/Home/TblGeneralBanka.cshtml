@@ -1,7 +1,4 @@
-﻿@model List<TblGeneralBanka>
-
-
-<div class="row">
+﻿<div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
     </div>
@@ -13,10 +10,12 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            var model = @Html.Raw(JsonConvert.SerializeObject(Model));
-            GridData(model);
+            $.getJSON('/TblGeneralBanka/Get', function (model) {
+                GridData(model)
+            })
         });
         function GridData(models) {
+            let url = "TblGeneralBanka";
             $("#gridContainer").dxDataGrid({
                 dataSource: models,
                 columns: [
@@ -43,14 +42,6 @@
                     {
                         dataField: "Erpkodu",
                         caption: "Erpkodu"
-                    },
-                    {
-                        dataField: "DegistirenId",
-                        caption: "DegistirenId"
-                    },
-                    {
-                        dataField: "OlusturanId",
-                        caption: "OlusturanId"
                     },
                     {
                         dataField: "Onaylandi",
@@ -108,7 +99,7 @@
                     allowAdding: true,
                     allowDeleting: true,
                     popup: {
-                        title: 'TblGeneralApplication Info',
+                        title: 'TblGeneralBanka Info',
                         showTitle: true,
                         width: 700,
                         height: 525,
@@ -119,14 +110,14 @@
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                items: ['Application', 'Description', 'Path', 'IconHtml', 'BaseUrl', 'BaseApiOnEk', 'Sira'],
+                                items: ['Adi', 'Kodu', 'GenelKodu', 'Tip', 'Erpkodu'],
                             },
                             {
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                caption: 'TblGeneralApplication Base',
-                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi', 'SystemApp', 'ParametreAktif', 'DisariAcik'],
+                                caption: 'TblGeneralBanka Base',
+                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
                             }],
                     },
                 }

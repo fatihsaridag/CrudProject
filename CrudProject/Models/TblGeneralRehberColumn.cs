@@ -5,6 +5,7 @@ namespace CrudProject.Models
 {
     public partial class TblGeneralRehberColumn
     {
+
         public long Id { get; set; }
         public bool Silindi { get; set; }
         public long Revizyon { get; set; }

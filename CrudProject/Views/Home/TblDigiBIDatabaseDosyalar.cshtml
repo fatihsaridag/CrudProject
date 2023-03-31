@@ -1,9 +1,4 @@
-﻿
-
-<nav aria-label="breadcrumb">
-    <h3 class="text  text-center text-primary">TblCmsVersion Table</h3>
-</nav>
-<div class="row">
+﻿<div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
     </div>
@@ -15,22 +10,14 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            GridData();
+            $.getJSON('/TblDigiBIDatabaseDosyalar/Get', function (model) {
+                GridData(model)
+            })
         });
-        function GridData() {
+        function GridData(models) {
             let url = "TblDigiBIDatabaseDosyalar";
             $("#gridContainer").dxDataGrid({
-                dataSource: DevExpress.data.AspNet.createStore({
-                    key: 'Id',
-                    loadUrl: `/${url}/Get`,
-                    insertUrl: `/${url}/Post`,
-                    updateUrl: `/${url}/Put`,
-                    deleteUrl: `/${url}/Delete`,
-                    onBeforeSend(method, ajaxOptions) {
-                        ajaxOptions.xhrFields = { withCredentials: true };
-                    },
-                }),
-                remoteOperations: true,
+                dataSource: models,
                 columns: [
                     {
                         dataField: "Id",
@@ -39,18 +26,39 @@
                         dataField: "SubeKodu",
                         caption: "SubeKodu"
                     },
-                    {
+                     {
                         dataField: "DatabaseId",
                         caption: "DatabaseId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblDigiBIDatabaselerLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
                     },
                     {
                         dataField: "DosyaId",
-                        caption: "DosyaId"
+                        caption: "DosyaId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/TblDigiBIDosyaSistemiLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
                     },
                     {
                         dataField: "FirmaKodu",
-                        caption: "FirmaKodu",
-
+                        caption: "FirmaKodu"
                     },
                     {
                         dataField: "IsletmeKodu",
@@ -60,17 +68,18 @@
                         dataField: "Yil",
                         caption: "Yil"
                     },
-                    {
-                        dataField: "Guid",
-                        caption: "Guid"
-                    },
-                    {
-                        dataField: "Silindi",
-                        caption: "Silindi"
-                    },
+                   
                     {
                         dataField: "Onaylandi",
                         caption: "Onaylandi"
+                    },
+                    {
+                        dataField: "Aktif",
+                        caption: "Aktif"
+                    },
+                    {
+                        dataField: "Guid",
+                        caption: "Guid"
                     },
                     {
                         dataField: "DegistirenId",
@@ -91,15 +100,32 @@
                     {
                         dataField: "Revizyon",
                         caption: "Revizyon"
+                    },
+                    {
+                        dataField: "Silindi",
+                        caption: "Silindi"
                     }
+
                 ],
+                paging: {
+                    pageSize: 6
+                },
+                onRowInserted: function (e) {
+                    rowInsert(e.data);
+                },
+                onRowUpdated: function (e) {
+                    rowUpdate(e.data);
+                },
+                onRowRemoved: function (e) {
+                    rowRemove(e.data.Id);
+                },
                 editing: {
                     mode: 'popup',
                     allowUpdating: true,
                     allowAdding: true,
                     allowDeleting: true,
                     popup: {
-                        title: 'TblCmsNavYetki Info',
+                        title: 'TblDigiBIDatabaseDosyalar Info',
                         showTitle: true,
                         width: 700,
                         height: 525,
@@ -110,25 +136,59 @@
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                items: ['Name', 'NavigationId', 'Icon', 'MasterId', 'ApplicationId', 'YeniSekmedeAc', 'DisUrl', 'Sira'],
+                                items: ['DatabaseId', 'DosyaId', 'FirmaKodu', 'IsletmeKodu', 'SubeKodu','Yil']
                             },
                             {
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                caption: 'TblGeneralApplication Base',
+                                caption: 'TblDigiBIDatabaseDosyalar Base',
                                 items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
-                            }],
+                            }
+                        ],
                     },
+                }
+            });
+        }
+        function rowUpdate(Data) {
+            AjaxMethod('@Url.Action("Put", "TblDigiBIDatabaseDosyalar")', Data);
+        }
+        function rowInsert(Data) {
+            AjaxMethod('@Url.Action("Post", "TblDigiBIDatabaseDosyalar")', Data);
+        }
+        function rowRemove(Data) {
+            DeleteCall('@Url.Action("Delete", "TblDigiBIDatabaseDosyalar")', Data);
+        }
+        function AjaxMethod(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: Data,
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
+                }
+            });
+        }
+
+        function DeleteCall(url, Data) {
+            $.ajax({
+                url: url,
+                type: 'POST',
+                data: { id: Data },
+                dataType: 'json',
+                async: false,
+                cache: false,
+                success: function (html) {
+                    alert(html === true ? "İşlem Başarılı" : "Hatalı İşlem");
+                }, error: function (xhr, status, error) {
+                    alert(error.responseTextss);
                 }
             });
         }
     </script>
 }
-
-
-
-
-
-
-

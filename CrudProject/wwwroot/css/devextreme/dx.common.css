@@ -482,7 +482,7 @@
   pointer-events: none;
 }
 .dx-color-scheme {
-  font-family: "#";
+     
 }
 .dx-widget {
   display: block;
@@ -3324,7 +3324,7 @@
   border: none;
   color: transparent;
   text-shadow: 0 0 0 gray;
-  min-width: 0;
+          
   width: 0.1px;
   padding-left: 0;
   padding-right: 0;
@@ -4523,7 +4523,7 @@ input.dx-hidden {
       -ms-flex: 1;
           flex: 1;
   height: auto;
-  min-width: 0;
+          
   min-height: 0;
 }
 .dx-datagrid-rowsview {
@@ -4770,7 +4770,7 @@ input.dx-hidden {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  min-width: 0;
+          
 }
 .dx-datagrid-filter-panel {
   padding: 10px;
@@ -4831,7 +4831,7 @@ input.dx-hidden {
   white-space: nowrap;
   color: transparent;
   position: relative;
-  min-width: 0;
+          
 }
 .dx-datagrid-group-panel .dx-block-separator .dx-sort {
   margin-left: 6px;
@@ -5711,7 +5711,7 @@ input.dx-hidden {
       -ms-flex: 1;
           flex: 1;
   height: auto;
-  min-width: 0;
+          
   min-height: 0;
 }
 .dx-treelist-rowsview {
@@ -5958,7 +5958,7 @@ input.dx-hidden {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  min-width: 0;
+          
 }
 .dx-treelist-filter-panel {
   padding: 10px;
@@ -7626,21 +7626,13 @@ input.dx-hidden {
   height: 15px;
 }
 .dx-resize-frame .dx-resizable-handle-right::after,
-.dx-resize-frame .dx-resizable-handle-left::after {
-  top: calc(50% -  11px / 2);
-}
+
 .dx-touch-device.dx-resize-frame .dx-resizable-handle-right::after,
-.dx-touch-device.dx-resize-frame .dx-resizable-handle-left::after {
-  top: calc(50% -  15px / 2);
-}
+
 .dx-resize-frame .dx-resizable-handle-top::after,
-.dx-resize-frame .dx-resizable-handle-bottom::after {
-  left: calc(50% -  11px / 2);
-}
+
 .dx-touch-device.dx-resize-frame .dx-resizable-handle-top::after,
-.dx-touch-device.dx-resize-frame .dx-resizable-handle-bottom::after {
-  left: calc(50% -  15px / 2);
-}
+
 .dx-resize-frame .dx-resizable-handle-right::after {
   right: -5.5px;
 }

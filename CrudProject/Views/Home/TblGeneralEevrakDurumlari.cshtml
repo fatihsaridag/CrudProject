@@ -1,7 +1,4 @@
-﻿@model IEnumerable<TblGeneralEevrakDurumlari>
-
-
-
+﻿
 <div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
@@ -12,12 +9,15 @@
 
 @section Scripts{
 
+
     <script type="text/javascript">
         $(document).ready(function () {
-            var model = @Html.Raw(JsonConvert.SerializeObject(Model));
-            GridData(model);
+            $.getJSON('/TblGeneralEevrakDurumlari/Get', function (model) {
+                GridData(model)
+            })
         });
         function GridData(models) {
+            let url = "TblGeneralEevrakDurumlari";
             $("#gridContainer").dxDataGrid({
                 dataSource: models,
                 columns: [
@@ -51,7 +51,7 @@
                     allowAdding: true,
                     allowDeleting: true,
                     popup: {
-                        title: 'TblGeneralDil Info',
+                        title: 'TblGeneralEevrakDurumlari Info',
                         showTitle: true,
                         width: 700,
                         height: 525,

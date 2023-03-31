@@ -7,7 +7,7 @@ namespace CrudProject.Models
     {
         public long Id { get; set; }
         public bool Silindi { get; set; }
-        public long Revizyon { get; set; }
+        public long Revizyon { get; set; }  
         public long IsletmeId { get; set; }
         public long FirmaId { get; set; }
         public long SubeId { get; set; }
