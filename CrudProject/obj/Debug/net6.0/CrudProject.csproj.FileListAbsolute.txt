@@ -380,9 +380,7 @@ C:\Users\fatih\source\repos\CrudProject\CrudProject\obj\Debug\net6.0\staticwebas
 C:\Users\fatih\source\repos\CrudProject\CrudProject\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Users\fatih\source\repos\CrudProject\CrudProject\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\fatih\source\repos\CrudProject\CrudProject\obj\Debug\net6.0\staticwebassets.development.json
-C:\Users\fatih\source\repos\CrudProject\CrudProject\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\fatih\source\repos\CrudProject\CrudProject\obj\Debug\net6.0\scopedcss\bundle\CrudProject.styles.css
-C:\Users\fatih\source\repos\CrudProject\CrudProject\obj\Debug\net6.0\scopedcss\projectbundle\CrudProject.bundle.scp.css
 C:\Users\fatih\source\repos\CrudProject\CrudProject\obj\Debug\net6.0\CrudProject.csproj.CopyComplete
 C:\Users\fatih\source\repos\CrudProject\CrudProject\obj\Debug\net6.0\CrudProject.dll
 C:\Users\fatih\source\repos\CrudProject\CrudProject\obj\Debug\net6.0\refint\CrudProject.dll
@@ -565,3 +563,6 @@ C:\Users\fatih\source\repos\CrudProject\CrudProject\bin\Debug\net6.0\runtimes\un
 C:\Users\fatih\source\repos\CrudProject\CrudProject\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\fatih\source\repos\CrudProject\CrudProject\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\fatih\source\repos\CrudProject\CrudProject\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\fatih\source\repos\CrudProject\CrudProject\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll
+C:\Users\fatih\source\repos\CrudProject\CrudProject\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\fatih\source\repos\CrudProject\CrudProject\obj\Debug\net6.0\scopedcss\projectbundle\CrudProject.bundle.scp.css

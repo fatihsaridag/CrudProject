@@ -8,9 +8,11 @@ namespace CrudProject.GenericRepository
     public class EfGenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
         private readonly OctaPullContext _context;
-        public EfGenericRepository(OctaPullContext context)
+        private readonly ILogger _logger;
+        public EfGenericRepository(OctaPullContext context, ILogger logger)
         {
             _context = context;
+            _logger = logger;
         }
         public void Create(TEntity entity)
         {
@@ -43,6 +45,7 @@ namespace CrudProject.GenericRepository
             IQueryable<TEntity> query = _context.Set<TEntity>();
             query = query.Where(predicate);
             return query.FirstOrDefault();
+
         }
     }
 }
