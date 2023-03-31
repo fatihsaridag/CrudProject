@@ -3,7 +3,7 @@ using CrudProject.Models;
 
 namespace CrudProject.GenericRepository.Concrete
 {
-    public class EfTblCMSAppNavigationRepository : EfGenericRepository<TblCmsappNavigation> ,ITblCMSAppNavigationRepository
+    public class EfTblCMSAppNavigationRepository : EfGenericRepository<TblCmsappNavigation>
     {
         public EfTblCMSAppNavigationRepository(OctaPullContext context) : base(context)
         {

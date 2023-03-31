@@ -3,7 +3,7 @@ using CrudProject.Models;
 
 namespace CrudProject.GenericRepository.Concrete
 {
-    public class EfTblGeneralBnkHarTipRepository : EfGenericRepository<TblGeneralBnkHarTip> , ITblGeneralBnkHarTipRepository
+    public class EfTblGeneralBnkHarTipRepository : EfGenericRepository<TblGeneralBnkHarTip> 
     {
         public EfTblGeneralBnkHarTipRepository(OctaPullContext context) : base(context)
         {

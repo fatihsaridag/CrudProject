@@ -438,5 +438,17 @@ namespace CrudProject.Controllers.GenericBaseController
             return Json(lookup);
         }
 
+        public IActionResult TblFileDosyaSistemiLookup()
+        {
+            var lookup = from i in _context.TblDigiBidosyaSistemis
+                         orderby i.Ad
+                         select new
+                         {
+                             Value = i.Id,
+                             Text = i.Ad
+                         };
+            return Json(lookup);
+        }
+
     }
 }

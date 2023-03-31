@@ -1,5 +1,4 @@
-﻿
-<div class="row">
+﻿<div class="row">
     <div class="col-md-8"></div>
     <div class="col-md-4">
     </div>
@@ -28,6 +27,37 @@
                         caption: "Name"
                     },
                     {
+                        dataField: "Sira",
+                        caption: "Sira"
+                    },
+                         {
+                        dataField: "Icon",
+                        caption: "Icon"
+                    },
+                         {
+                        dataField: "YeniSekmedeAc",
+                        caption: "YeniSekmedeAc"
+                    },
+                            {
+                        dataField: "DisUrl",
+                        caption: "DisUrl"
+                    },
+                    {
+                        dataField: "ApplicationId",
+                        caption: "ApplicationId",
+                        lookup: {
+                            dataSource: DevExpress.data.AspNet.createStore({
+                                key: 'Value',
+                                loadUrl: `/${url}/GeneralApplicationLookup`,
+                                onBeforeSend(method, ajaxOptions) {
+                                    ajaxOptions.xhrFields = { withCredentials: true };
+                                },
+                            }),
+                            valueExpr: 'Value',
+                            displayExpr: 'Text',
+                        }
+                    },
+                    {
                         dataField: "NavigationId",
                         caption: "NavigationId",
                         lookup: {
@@ -43,43 +73,12 @@
                         }
                     },
                     {
-                        dataField: "Icon",
-                        caption: "Icon"
-                    },
-                    {
                         dataField: "MasterId",
                         caption: "MasterId",
                         lookup: {
                             dataSource: DevExpress.data.AspNet.createStore({
                                 key: 'Value',
                                 loadUrl: `/${url}/TbLCmsAppMenuLookup`,
-                                onBeforeSend(method, ajaxOptions) {
-                                    ajaxOptions.xhrFields = { withCredentials: true };
-                                },
-                            }),
-                            valueExpr: 'Value',
-                            displayExpr: 'Text',
-                        }
-                    },
-                    {
-                        dataField: "YeniSekmedeAc",
-                        caption: "YeniSekmedeAc"
-                    },
-                    {
-                        dataField: "DisUrl",
-                        caption: "DisUrl"
-                    },
-                    {
-                        dataField: "Sira",
-                        caption: "Sira"
-                    },
-                    {
-                        dataField: "ApplicationId",
-                        caption: "ApplicationId",
-                        lookup: {
-                            dataSource: DevExpress.data.AspNet.createStore({
-                                key: 'Value',
-                                loadUrl: `/${url}/GeneralApplicationLookup`,
                                 onBeforeSend(method, ajaxOptions) {
                                     ajaxOptions.xhrFields = { withCredentials: true };
                                 },
@@ -154,15 +153,9 @@
                                 itemType: 'group',
                                 colCount: 2,
                                 colSpan: 2,
-                                items: ['IsletmeId', 'FirmaId', 'SubeId', 'DosyaId', 'UserId', 'Yil'],
-                            },
-                            {
-                                itemType: 'group',
-                                colCount: 2,
-                                colSpan: 2,
-                                caption: 'TblCmsappMenus Base',
-                                items: ['Revizyon', 'Aktif', 'Onaylandi', 'Silindi'],
-                            }],
+                                items: ['Name', 'Sira', 'NavigationId', 'Icon', 'MasterId', 'YeniSekmedeAc', 'DisUrl', 'ApplicationId']
+                            }
+                        ],
                     },
                 }
             });
@@ -209,12 +202,3 @@
         }
     </script>
 }
-
-
-
-
-
-
-
-
-

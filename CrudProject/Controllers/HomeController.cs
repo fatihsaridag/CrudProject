@@ -5,14 +5,7 @@ namespace CrudProject.Controllers
 {
     public class HomeController : Controller
     {
-
-        private readonly OctaPullContext _octaPullContext;
-
-        public HomeController(OctaPullContext octaPullContext)
-        {
-            _octaPullContext = octaPullContext;
-        }
-
+        
         public IActionResult TblGeneralKulGrupEkran()
         {
             return View();

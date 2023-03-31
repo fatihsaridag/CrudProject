@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CrudProject.Models
 {
@@ -22,6 +23,7 @@ namespace CrudProject.Models
         public long KisiId { get; set; }
         public long NavigationId { get; set; }
 
+        [ForeignKey("NavigationId")]
         public virtual TblCmsappNavigation TblCmsappNavigation { get; set; } = null!;
         public virtual TblGeneralIsletme Isletme { get; set; } = null!;
         public virtual TblSsokullanici Kisi { get; set; } = null!;
